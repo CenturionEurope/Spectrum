@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS `ColeMod_Pages_Panels_Uids`;
+CREATE TABLE `ColeMod_Pages_Panels_Uids` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`PageID` int(11) DEFAULT NULL,`PanelID` int(11) DEFAULT NULL,`PanelArrayPos` int(11) DEFAULT NULL,`Uid` varchar(250) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,24 @@
+UPDATE Settings SET settingValue='4.0.0' WHERE settingCodename='SystemVersion';
+
+DROP TABLE ColeMod_Dashboard;
+DROP TABLE IF EXISTS `ColeMod_Today`;
+
+CREATE TABLE `ColeMod_Today` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `WidgetID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS `Widgets`;
+CREATE TABLE `Widgets` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `Title` varchar(250) DEFAULT NULL,
+  `Controller` varchar(250) DEFAULT NULL,
+  `Function` varchar(250) DEFAULT NULL,
+  `Blade` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `Widgets` (`id`, `Title`, `Controller`, `Function`, `Blade`) VALUES (1,'Server Storage','App\\Http\\Controllers\\WidgetsController','Storage','Widgets.Storage');
+
+UPDATE Modules SET ModuleName='Today',Codename='today',Controller='App\Http\Controllers\ColeControllers\TodayController',`Database`='ColeMod_Today',Template='today' WHERE Codename='dashboard';

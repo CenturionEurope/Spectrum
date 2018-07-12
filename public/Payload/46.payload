@@ -1,0 +1,1 @@
+ALTER TABLE `TableViewMapper` ADD `isTemplatePicker` int(11) DEFAULT 0;

@@ -1,0 +1,3 @@
+UPDATE Settings SET settingValue='4.0.1' WHERE settingCodename='SystemVersion';
+
+INSERT INTO `Widgets` (`Title`, `Controller`, `Function`, `Blade`) VALUES ('Visitors','App\\Http\\Controllers\\WidgetsController','Visitors','Widgets.Visitors');

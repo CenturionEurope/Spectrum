@@ -1,0 +1,3 @@
+UPDATE Settings SET settingValue='5.1.0' WHERE settingCodename='SystemVersion';
+DROP TABLE IF EXISTS `ColeMod_Pages_BackInTime`;
+CREATE TABLE `ColeMod_Pages_BackInTime` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`PageID` int(11) DEFAULT NULL,`DateTime` datetime DEFAULT NULL,`Object` text,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;

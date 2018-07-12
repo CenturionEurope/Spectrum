@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS `ColeMod_Pages_Templates`;
+CREATE TABLE `ColeMod_Pages_Templates` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Template` varchar(100) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;

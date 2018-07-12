@@ -1,0 +1,316 @@
+::-moz-selection {
+    color: white;
+    background: @cole_accent;
+}
+
+::selection {
+    color: white; 
+    background: @cole_accent;
+}
+
+body{
+	.widget-box-2 .widget-detail-2{
+		text-align: left;
+	}
+	video[autoplay]{
+		pointer-events: none;
+	}
+	&[data-pagereference=MainUI]{
+		.notification-box{
+			.pulse{
+				background-color: @cole_accent;
+				border: 3px solid @cole_accent;
+			}
+		}
+		.NoNotifications{
+			i,span{
+				color: #435966;
+			}
+		}
+		&.NightMode{
+			.topbar-left,.side-menu,.side-bar.right-bar{
+				background: #253138!important;
+			}
+			.NoNotifications{
+				i,span{
+					color: white;
+				}
+			}
+			#sidebar-menu,.side-bar.right-bar{
+				h4,span.name,a.right-bar-toggle{
+					color: #98a6ad;	
+				}
+				ul{
+					li{
+						a{
+							color: #98a6ad;	
+							&:hover{
+								color: @cole_accent;
+							}
+						}
+					}
+				}
+			}
+		}
+		div.Today{
+			overflow: auto;
+			.widget{
+				a{
+					color: @cole_accent;
+				}
+			}
+		}
+		.trumbowyg-box{
+			border:2px solid rgba(238,238,238,0.1);
+			svg{
+				fill: white;
+			}
+			.trumbowyg-button-pane{
+				background:#394c57;
+				border: 0;
+				padding: 0;
+				.trumbowyg-button-group{
+					button:not(.trumbowyg-disable):hover{
+						svg{
+							fill: black;
+						}
+					}
+					button.trumbowyg-active-button,button.trumbowyg-active{
+						background-color: white;
+						color: black;
+						svg{
+							fill: black;
+						}
+					}						
+				}
+				.trumbowyg-button-group:not(:empty)+.trumbowyg-button-group::before{
+					background: none;
+					border: 0;
+				}
+				&::after{
+					background: none;
+					content: "";
+				}
+			}
+			.trumbowyg-editor{
+				color: white;
+				border: 0;
+				
+			}
+		}
+		pre{
+			max-height: 200px;
+			overflow: auto;
+		}
+		li.NoNotifications{
+			border-bottom: 0!important;
+			span,i{
+				display: block;
+				text-align: center;
+			}
+			i{
+				font-size: 50px;
+				margin: 20px 0px;
+			}
+			&:hover{
+				background-color: initial!important;
+			}
+		}
+	}
+		
+	&[data-pagereference=install],
+	&[data-pagereference=Login]{
+		height: auto;
+		.ResponsiveNotice{
+			display: none;
+		}
+		@media screen and (max-width: 960px) {
+			.ResponsiveNotice{
+				display: block;
+			}
+			.LoginPanel{
+				display: none;
+			}			
+		}
+	}
+	padding: 0;
+	.btn.btn-primary{
+		&:hover,&:focus,&:active{
+			color: @cole_accent!important;
+			background-color: white!important;
+			border-color: white!important;
+		}
+	}
+	.LoadingElement{
+		background-color: @cole_widget_bkgd;
+		width: 80px;
+		height: 80px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -40px;
+		margin-top: -40px;
+		z-index: 999;
+		background-image: url('/Cole/UI/images/ring.gif');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 95px;
+		border-radius: 5px;
+		display: none;
+		-webkit-backface-visibility: hidden;
+	    -webkit-transform-origin-z: 0;
+
+	}	
+	div.navbar.navbar-default{
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+	div#sidebar-menu{
+		overflow: auto;
+	}
+	.left.side-menu{
+		.sidebar-inner{
+			.user-img{
+				img{
+					border: 0!important;
+					padding: 0;
+				}
+			}
+		}
+	}
+	table#datatable{
+		img.ColeConstructThumbnail{
+			height: 50px;
+		}
+	}	
+	.form-group{
+		span.MaxLength{
+			float: right;
+			font-weight: bold;
+			color: #10c469;
+			&.warning{
+				color: #f9c851;
+			}
+			&.danger{
+				color: #ff5b5b;
+			}
+		}
+		img.ColeConstructThumbnailEdit{
+			max-width: 50%;
+			display: block;
+		}
+	}
+	footer.footer.text-right{
+		border: 0;
+		color: white!important;
+		text-shadow: 0px 0px 10px rgba(150, 150, 150, 0.5);
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+	}
+	&.Loading{
+		.LoadingElement{
+			display: block;
+		}
+		div#wrapper{
+			opacity: 0.4;
+		    -webkit-filter: blur(6px);
+		    pointer-events: none;
+		    -webkit-backface-visibility: hidden;
+		    -webkit-transform-origin-z: 0;
+		    
+		}
+	}
+	div.AboutCole{
+		background-image: url('/Cole/Brand/coleTransparentDark.png');
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		height: 100%;
+		padding: 50px;
+		img{
+			width: 200px;
+		}
+	}
+	div#wrapper{
+		
+		.content-page{
+			overflow: auto;
+			height: 100%;
+		    padding-bottom: 73px;
+		}
+	}
+	a#Logout{
+		cursor: pointer;
+	}
+	.EditControls{
+		display: none;
+		.ColeEditToolbar{
+			margin-top: 40px;
+			.btn{
+				margin-right: 5px;
+			}
+		}
+	}
+	.card-box{
+		&.ActivityLog{
+			padding-top: 8px;
+			div.comment{
+				img{
+					border-radius: 100%;
+				}
+			}
+		}
+	}
+	.Welcome{
+		margin: 0px -20px;
+		display: block;
+		position: relative;
+		img.Background{
+			width: 100%;
+			position: absolute;
+			z-index: 0;
+		}
+		.Text{
+			position: absolute;
+			z-index: 1;
+			left: 20px;
+			top: 20px;
+			background-color: @cole_widget_bkgd;
+			padding: 20px;
+			max-width: 50%;
+			h1,h2{
+				margin: 0;
+			}
+			h1{
+				font-weight: bold;
+				font-size: 50px;
+			}
+			img{
+				width: 200px;
+			}
+			a{
+				color: white;
+				text-decoration: underline;
+				margin-top: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+	
+	
+	footer{
+		a{
+			color: @cole_accent;
+			&:hover,&:focus,&:active{
+				color: white;
+			}
+		}
+		span{
+			float: right;
+		}
+	}
+}

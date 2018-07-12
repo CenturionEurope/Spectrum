@@ -1,0 +1,7 @@
+UPDATE Settings SET settingValue='5.0.0' WHERE settingCodename='SystemVersion';
+DROP TABLE IF EXISTS `Help`;
+CREATE TABLE `Help` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Category` int(11) DEFAULT NULL,`Title` varchar(100) DEFAULT NULL,`Score` int(11) NOT NULL DEFAULT '0',`Template` varchar(100) DEFAULT NULL,`Icon` varchar(100) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `Help` (`id`, `Category`, `Title`, `Score`, `Template`, `Icon`) VALUES (1,1,'User Accounts',1,'Help/Basics/Accounts','zmdi-accounts-alt'),(2,2,'Setting Up Analytics',3,'Help/Admin/Analytics','zmdi-chart'),(3,2,'Locking a User\'s Permissions',2,'Help/Admin/LockPermissions','zmdi-lock');
+DROP TABLE IF EXISTS `Help_Categories`;
+CREATE TABLE `Help_Categories` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Title` varchar(100) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `Help_Categories` (`id`, `Title`) VALUES (1,'Cole Basics'),(2,'Administration');

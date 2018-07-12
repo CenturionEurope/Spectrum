@@ -1,0 +1,3 @@
+The custom folder for Cole allows you to create your own modules for Cole.
+
+By placing your modules in Cole's Custom Modules folder, you ensure they aren't overwritten when the system updates potentially altering your custom code.

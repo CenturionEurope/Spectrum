@@ -1,0 +1,1 @@
+Cole now features a help module which will be growing with topics over time. From the very basics like setting up user accounts to the advanced with customising Cole completely, there is something for everyone.

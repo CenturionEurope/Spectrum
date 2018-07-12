@@ -1,0 +1,46 @@
+body[data-pagereference=error500]{
+	background-color: #344251;
+	.wrapper-page{
+		width: 50%;
+		h1{
+			text-align: center;
+			color: white;
+			margin: 50px 0px;
+			span.name{
+				color: #88e6f8;
+			}
+			span.location{
+				color: #5df654;
+			}
+			span.tilde{
+				color: #fdd66d;
+			}
+			i{
+				font-style: normal;
+				font-size: 80px;
+				vertical-align: -17px;
+				display: inline-block;
+				position: relative;
+				animation: glowcursor 3s infinite;
+			}
+		}
+		p{
+			text-align: center;
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+@keyframes glowcursor {
+  0% {
+    opacity: 1; 
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+  100%{
+	  opacity: 1;
+  }
+}

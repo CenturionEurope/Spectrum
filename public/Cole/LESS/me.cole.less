@@ -1,0 +1,109 @@
+.content-page[data-module=me]{
+	.AccountHero{
+		background-size: cover;
+		padding: 40px;
+		padding-top: 100px;
+		overflow: auto;
+		-webkit-backdrop-filter: blur(10px);
+		img{
+			border-radius: 100%;
+			width: 100px;
+			float: left;
+		}
+		h1{
+			font-weight: bold;
+			margin: 25px;
+			float: left;
+		}
+	}
+	div.ProfilePictures{
+		height: 120px;
+		white-space:nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+		img{
+			width: 100px;
+			border-radius: 100%;
+			display: inline-block;
+			margin: 10px;
+			cursor: pointer;
+		}
+	}
+	form#ColeUpload{
+		display: none;
+	}
+	table.permissions{
+		thead{
+			td{
+				color: white;
+				&:not(.Corner){
+					cursor: pointer;
+				}
+			}
+		}
+		tbody{
+			td{
+				i{
+					cursor: pointer;
+					-moz-transition:color 0.15s ease-in;
+					-o-transition:color 0.15s ease-in;
+					-webkit-transition:color 0.15s ease-in;
+					&:not(.Active) {
+						color: #98a6ad!important;
+					}
+				}
+				&.Module{
+					cursor: pointer;
+				}
+			}
+		}
+		td{
+			text-align: center;
+			&.Module{
+				i{
+					display: inline-block;
+					font-size: 20px;
+					margin-right: 5px;
+					vertical-align: middle;
+				}
+			}
+			i{
+				display: block;
+				font-size: 25px;
+				margin-bottom: 0px;
+			}
+			input[type=checkbox]{
+				display: none;
+			}
+			&[data-permission=get]{
+				i{
+					color: #10c469;
+				}
+			}
+			&[data-permission=create]{
+				i{
+					color: #35b8e0;
+				}
+			}
+			&[data-permission=save]{
+				i{
+					color: #f9c851;
+				}
+			}
+			&[data-permission=delete]{
+				i{
+					color: #ff5b5b;
+				}
+			}
+			
+		}
+		&.lockout{
+			opacity: 0.3;
+			pointer-events: none;
+			i{
+				color: #98a6ad!important;
+			}
+		}
+	}
+}

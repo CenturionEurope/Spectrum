@@ -1,0 +1,2 @@
+UPDATE Settings SET settingValue='4.6.0' WHERE settingCodename='SystemVersion';
+INSERT INTO `Widgets` (`Title`, `Controller`, `Function`, `Blade`) VALUES ('New from Cole','App\\Http\\Controllers\\WidgetsController','ColeNew','Widgets.ColeNew');

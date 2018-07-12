@@ -1,0 +1,3 @@
+UPDATE Settings SET settingValue='4.3.0' WHERE settingCodename='SystemVersion';
+INSERT INTO `Settings` (`settingEnglishName`, `settingCodeName`, `settingValue`, `settingB64`, `Locked`) VALUES ('UpdatedAgo','UpdatedAgo','1521033339',0,1);
+INSERT INTO `Widgets` (`Title`, `Controller`, `Function`, `Blade`) VALUES ('Last Updated','App\\Http\\Controllers\\WidgetsController','LastUpdated','Widgets.LastUpdated');

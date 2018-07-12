@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS `ColeMod_Pages_Panels`;
+CREATE TABLE `ColeMod_Pages_Panels` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Name` varchar(250) DEFAULT NULL,`Blade` varchar(250) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `TableViewMapper` (`Table`, `ColName`, `EnglishName`, `Show`, `Edit`, `IsBoolean`, `Currency`, `SaltedMD5`, `B64`, `isArray`, `ArrayDecoderPlugin`, `isFlag`, `FlagDecoderPlugin`, `isDate`, `isRTF`, `isImg`, `isThumb`, `MaxLength`, `isFile`) VALUES ('ColeMod_Pages','Panels',NULL,0,0,0,0,0,0,0,NULL,0,NULL,0,0,0,0,NULL,0);
+ALTER TABLE `ColeMod_Pages` ADD `Panels` TEXT DEFAULT NULL;
+UPDATE Settings SET settingValue='5.2.0' WHERE settingCodename='SystemVersion';

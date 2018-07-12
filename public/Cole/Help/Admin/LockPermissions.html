@@ -1,0 +1,15 @@
+<p>In large organisations it may be important that one or multiple users are unable to change the permissions on their account.</p>
+<p>Please note that once you have locked permissions you will be unable to change them via the Cole user interface and will have to unlock permissions to alter them again, so it's advised that you set the permissions of a user first before locking them.</p>
+<p>You should only lock permissions for users if you are comfortable with MySQL&reg; and should be preformed if you consider yourself a competent developer.</p>
+
+<ol>
+    <li>Connect to the applicable database server using a MySQL&reg; tool such as Sequel Pro and open Cole's database.</li>
+    <li>Open the <pre>Users</pre> table</li>
+    <li>Find the user you want to lock the permissions of</li>
+    <li>Edit the value of <pre>PermissionsLocked</pre> from 0 to 1</li>
+    <li>Save the changes to the database</li>
+    <li>In Cole, click your profile picture on the Sidebar</li>
+    <li>Click <strong><i class="zmdi zmdi-edit"></i> Edit</strong> on the applicable user that you altered the permissions for</li>
+    <li>Ensure that the permissions matrix is locked.</li>
+</ol>
+

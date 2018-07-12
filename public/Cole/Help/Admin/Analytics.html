@@ -1,0 +1,30 @@
+<p>Setting up Analytics is recommended only if you are comfortable editing web based files and should be preformed if you consider yourself a competent developer.</p>
+
+<ol>
+    <li>Head to <a href="https://console.developers.google.com/apis/dashboard" target="_blank">Google's API Site</a></li>
+    <li>In the upper left next to the Google APIs logo, use the project selector to create a new project</li>
+    <li>With the new project selected in the upper left, Click ENABLE APIS AND SERVICES</li>
+    <li>Search for Analytics API and Enable it.</li>
+    <li>Click Credentials on the sidebar</li>
+    <li>Click the blue Create Credentials button and choose Service Account Key</li>
+    <li>Under Service account, select New service account</li>
+    <li>Enter a service account name</li>
+    <li>Under Role select Service Accounts > Service Account Admin</li>
+    <li>Under format ensure JSON is selected.</li>
+    <li>A .json file is downloaded to your computer. Upload it to your server that Cole is installed on within the folder <pre>/storage/app/analytics/service-account-credentials.json</pre></li>
+    <li>Open the .json file in a text editor.</li>
+    <li>Look for the words <pre>client_email</pre></li>
+    <li>Copy the value located near <pre>client_email</pre> ensuring you miss out any quotes (It will look like an email address)</li>
+    <li>Go to Google Analytics.</li>
+    <li>Enter the admin panel</li>
+    <li>Open User Management</li>
+    <li>Add a new user</li>
+    <li>Paste the email address you copied from the .json file into the email field.</li>
+    <li>Untick Notify new users by email</li>
+    <li>Tick edit, collaborate and Read & Analyse</li>
+    <li>Head back to the Admin panel in Analytics and Open "View Settings"</li>
+    <li>Copy the View ID number to the clipboard</li>
+    <li>Add the following to the bottom of Cole's .env file <pre>ANALYTICS_VIEW_ID=</pre></li>
+    <li>Paste the View ID directly after the equals sign and save changes</li>
+</ol>
+

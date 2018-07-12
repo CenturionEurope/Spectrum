@@ -1,0 +1,2 @@
+INSERT INTO `Settings` (`settingEnglishName`, `settingCodeName`, `settingValue`, `settingB64`, `Locked`) VALUES ('Timeout','Timeout','',0,1);
+UPDATE Settings SET settingValue='3.5.3' WHERE settingCodename='SystemVersion'

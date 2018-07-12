@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS `ColeMod_Analytics`;
+CREATE TABLE `ColeMod_Analytics` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `Modules` (`ModuleName`, `Codename`, `Controller`, `Database`, `Template`, `Icon`, `Custom`) VALUES ('Analytics','analytics','App\\Http\\Controllers\\ColeControllers\\AnalyticsController','ColeMod_Analytics','analytics','zmdi-chart',0);
+UPDATE Settings SET settingValue='4.2.0' WHERE settingCodename='SystemVersion';

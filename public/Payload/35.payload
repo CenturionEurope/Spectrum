@@ -1,0 +1,2 @@
+ALTER TABLE `Help` ADD `Icon` VARCHAR(100) DEFAULT NULL;
+UPDATE Settings SET settingValue='4.9.8' WHERE settingCodename='SystemVersion';

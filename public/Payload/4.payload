@@ -1,0 +1,2 @@
+UPDATE Settings SET settingValue='3.5.4' WHERE settingCodename='SystemVersion';
+INSERT INTO `TableViewMapper` (`Table`, `ColName`, `EnglishName`, `Show`, `Edit`, `IsBoolean`, `Currency`, `SaltedMD5`, `B64`, `isArray`, `ArrayDecoderPlugin`, `isFlag`, `FlagDecoderPlugin`, `isDate`, `isRTF`, `isImg`, `isThumb`, `MaxLength`) VALUES ('Users','Token',NULL,0,0,0,0,0,0,0,NULL,0,NULL,0,0,0,0,NULL);

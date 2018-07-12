@@ -1,0 +1,1 @@
+UPDATE Settings SET settingValue='4.9.6' WHERE settingCodename='SystemVersion';

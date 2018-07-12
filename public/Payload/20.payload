@@ -1,0 +1,2 @@
+ALTER TABLE `Users` ADD `PermissionsLocked` INT NOT NULL DEFAULT 0;
+INSERT INTO `TableViewMapper` (`Table`, `ColName`, `EnglishName`, `Show`, `Edit`, `IsBoolean`, `Currency`, `SaltedMD5`, `B64`, `isArray`, `ArrayDecoderPlugin`, `isFlag`, `FlagDecoderPlugin`, `isDate`, `isRTF`, `isImg`, `isThumb`, `MaxLength`, `isFile`) VALUES ('Users','PermissionsLocked','Are Permissions Locked?',0,0,0,0,0,0,0,NULL,0,NULL,0,0,0,0,NULL,0);

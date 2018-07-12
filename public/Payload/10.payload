@@ -1,0 +1,2 @@
+UPDATE Settings SET settingValue='4.0.6' WHERE settingCodename='SystemVersion';
+DELETE FROM Modules WHERE Codename='update'

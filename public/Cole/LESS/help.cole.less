@@ -1,0 +1,97 @@
+.content-page[data-module=help]{
+    div.Index{
+        i.Headline{
+            font-size: 100px;
+            display: block;
+            text-align: center;
+        }
+        h1,p{
+            &.Intro{
+                text-align: center;
+                display: block;
+            }
+        }
+        div.Categories{
+            overflow: auto;
+            div.Category{
+                padding-bottom: 20px;
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    li{
+                        font-size: 18px;
+                        cursor: pointer;
+                        &:hover{
+                            color: @cole_accent;
+                        }
+                        span.Score{
+                            &[data-score=score1]{
+                                color: #10c469;
+                            }
+                            &[data-score=score2]{
+                                color: #f9c851;
+                            }
+                            &[data-score=score3]{
+                                color: #ff5b5b;
+                            }                    
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.Content{
+        display: none;
+        div.Title{
+            display: block;
+            overflow: auto;
+            h1{
+                &.Left{
+                    float: left;
+                }
+                &.Right{
+                    float: right;
+                    span.Score{
+                        &[data-score=score1]{
+                            color: #10c469;
+                        }
+                        &[data-score=score2]{
+                            color: #f9c851;
+                        }
+                        &[data-score=score3]{
+                            color: #ff5b5b;
+                        }                    
+                    }
+                }
+            }
+        }
+        div.Body{
+            h1{
+                font-size: 24px;
+                margin: 0;
+            }
+            a{
+                color: @cole_accent;
+            }
+            label{
+                display: block;
+            }
+            ol{
+                padding: 0;
+                padding-left: 20px;
+                li{
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    pre{
+                        display: inline-block;
+                        margin: 0;
+                        vertical-align: middle;
+                        &.Block{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

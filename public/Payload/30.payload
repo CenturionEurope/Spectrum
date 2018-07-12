@@ -1,0 +1,2 @@
+CREATE TABLE `Notifications` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`User` int(11) DEFAULT NULL,`Module` varchar(100) DEFAULT NULL,`Notification` varchar(250) DEFAULT NULL,`Read` int(11) NOT NULL DEFAULT '0',PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+UPDATE Settings SET settingValue='4.9.0' WHERE settingCodename='SystemVersion';

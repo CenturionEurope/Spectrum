@@ -1,0 +1,1 @@
+ALTER TABLE Users ADD Token varchar(250)
