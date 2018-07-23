@@ -116,6 +116,28 @@ body{
 				background-color: initial!important;
 			}
 		}
+		ul.NoSideControls{
+			display: none;
+		}
+		&.NoSide{
+			.left.side-menu,.topbar-left,ul.StandardControls{
+				display: none;
+			}
+			.navbar-default .navbar-left{
+				margin-left: -15px;
+				padding-left: 0px;
+			}
+			.content-page{
+				margin-left: 0px;
+			}
+			ul.NoSideControls{
+				display: block;
+			}
+			footer{
+				width: 100%;
+				left: 0px;
+			}
+		}
 	}
 		
 	&[data-pagereference=install],

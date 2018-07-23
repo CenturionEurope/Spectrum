@@ -23,7 +23,7 @@
                 <li>
                     <!-- Notification -->
                     <div class="notification-box">
-                        <ul class="list-inline m-b-0">
+                        <ul class="list-inline m-b-0 StandardControls">
                             <li>                            
                                 <a href="javascript:void(0);" class="right-bar-toggle">
                                     <i class="zmdi zmdi-notifications-none"></i>
@@ -38,6 +38,13 @@
                             <li>
                                 <a id="Logout">
                                     <i class="zmdi zmdi-power"></i>
+                                </a>
+                            </li>                                       
+                        </ul>
+                        <ul class="list-inline m-b-0 NoSideControls">
+                            <li>
+                                <a id="CloseNoSide">
+                                    <i class="zmdi zmdi-close-circle"></i>
                                 </a>
                             </li>                                       
                         </ul>
