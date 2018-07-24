@@ -319,9 +319,15 @@ class ColeController extends Controller
 			$_POST['SpecialMode'] = true;
 		}
 
+		if(!isset($ModuleData->EditView)){
+			$View = 'Prebuilt/EditPane';
+		}else{
+			$View = $ModuleData->EditView;
+		}
+
 	
 	    $_POST['ModuleData'] = $ModuleData;
-	    return \View::make('Prebuilt/EditPane')->with('Cole', $_POST);
+	    return \View::make($View)->with('Cole', $_POST);
 	    
     }
     

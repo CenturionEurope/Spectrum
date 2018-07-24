@@ -763,6 +763,9 @@ Cole = {
 			});
 		}
 	},
+	"NoSide": {
+		Prior: null
+	}
 };
 
 $(function() {
