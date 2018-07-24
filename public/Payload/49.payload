@@ -1,0 +1,5 @@
+ALTER TABLE `Modules` ADD `EditView` varchar(100) DEFAULT NULL;
+INSERT INTO `Modules` (`ModuleName`, `Codename`, `Controller`, `Database`, `Template`, `Icon`, `Custom`, `EditView`) VALUES ('Stories', 'stories', 'App\\Http\\Controllers\\ColeControllers\\StoriesController', 'ColeMod_Stories', 'stories', 'zmdi-book', 0, 'Prebuilt/Story');
+DROP TABLE IF EXISTS `ColeMod_Stories`;
+CREATE TABLE `ColeMod_Stories` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Author` int(11) DEFAULT NULL,`Title` varchar(250) DEFAULT NULL,`Body` text,`CreatedAt` datetime DEFAULT NULL,`UpdatedAt` datetime DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+UPDATE Settings SET settingValue='7.0.0' WHERE settingCodename='SystemVersion';
