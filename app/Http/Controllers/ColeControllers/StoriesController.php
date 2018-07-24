@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use GrahamCampbell\Markdown\Facades\Markdown;
 
-class BlogController extends Controller
+class StoriesController extends Controller
 {
     
     // About: Cole DataAction Plugins
