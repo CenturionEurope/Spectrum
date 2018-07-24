@@ -175,7 +175,7 @@ Cole = {
 		        if(api.Outcome=="Success"){
 			        
 					if(api.DataActionResult.Outcome=="Success"){
-				        
+				    
 			        swal({
 						title: "Changes saved",
 						text: "The item has been created successfully.",
@@ -573,7 +573,7 @@ Cole = {
 		}
 	},
 	"EditPane": {
-		Boot: function(){
+		Boot: function(api){
 			// isURL
 			$("input.isURL").keyup(function() {
 				$(this).val($(this).val().replace(" ","-"));
@@ -657,7 +657,10 @@ Cole = {
 					}
 				});
 				$('#ajaxTree img').attr('src', $('.Cole.FEUrl').val() + $('input[type=hidden].Url').val());
-			}		
+			}
+			if ($.isFunction(Cole.DataActions.Get)) {
+				Cole.DataActions.Get(api);
+			 }
 		},
 	},
 	"DataActions": {
@@ -833,7 +836,7 @@ $('body').on('click', 'table tbody tr td .ColeModuleTrigger', function() {
 					
 					$('body').removeClass('Loading');
 					
-					Cole.EditPane.Boot();
+					Cole.EditPane.Boot(api);
 				
 			    }).fail(function(e) {Cole.Exception(e);});
 			    

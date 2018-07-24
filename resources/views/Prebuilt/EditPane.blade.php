@@ -61,7 +61,8 @@
 			'MaxLength' => null,
 			'isFile' => 0,
 			'isImg' => 0,
-			'isURL' => 0
+			'isURL' => 0,
+			'isTemplatePicker' => 0
 		);
 		
 	}
