@@ -4,7 +4,7 @@
             
 
             <div class="Story">
-                <input type="text" placeholder="Name your story..." />
+                <input type="text" id="Title" placeholder="Name your story..." value="{{ $Cole['Data']['Content']['Title'] or '' }}"/>
                 <ul class="Tools">
                     <li>
                         <button>
@@ -38,8 +38,9 @@
                     </li>
                             
                 </ul>
-                <textarea data-autoresize rows="10" placeholder="Write your story..." />
+                <textarea id="Body" data-autoresize rows="10" placeholder="Write your story...">{{ $Cole['Data']['Content']['Body'] or '' }}</textarea>
                 <p><small><a href="https://www.markdowntutorial.com/" target="_blank">How do I write Markdown?</a></small></p>
+                <pre>{{print_r($Cole)}}</pre>
             </div>
         </div>
 	</div>
