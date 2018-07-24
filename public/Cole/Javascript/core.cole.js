@@ -152,6 +152,11 @@ Cole = {
 				}
 			});
 		});
+		$( "a#CloseNoSide" ).click(function() {
+			if($('.ColeCancelTrigger').length!=0){
+				$('.ColeCancelTrigger').click();
+			}
+	 	});
 	   	$('div#sidebar-menu').height(parseInt($(window).height())-278);
 	},
 	Exception: function(e){
@@ -210,6 +215,7 @@ Cole = {
 						showCancelButton: false,
 					}).then((result) => {
 						if (result.value){
+							$('body').removeClass('NoSide');
 							$('ul.Modules li a[data-module=' + module + ']').click();
 						}
 					});			    
@@ -223,6 +229,7 @@ Cole = {
 					showCancelButton: false,
 				}).then((result) => {
 					if (result.value){
+						$('body').removeClass('NoSide');
 						$('ul.Modules li a[data-module=' + module + ']').click();
 					}
 				});
@@ -244,6 +251,7 @@ Cole = {
 						showCancelButton: false,
 					}).then((result) => {
 						if (result.value){
+							$('body').removeClass('NoSide');
 							$('ul.Modules li a[data-module=' + module + ']').click();
 						}
 					});
@@ -270,7 +278,8 @@ Cole = {
 						showCancelButton: false,
 						allowOutsideClick: false,
 					}).then((result) => {
-						if (result.value){						
+						if (result.value){
+							$('body').removeClass('NoSide');			
 							$('ul.Modules li a[data-module=' + module + ']').click();
 						}
 					});			    
@@ -283,7 +292,8 @@ Cole = {
 					allowOutsideClick: false,
 					showCancelButton: false,
 				}).then((result) => {
-					if (result.value){					
+					if (result.value){
+						$('body').removeClass('NoSide');			
 						$('ul.Modules li a[data-module=' + module + ']').click();
 					}
 				});
@@ -310,6 +320,7 @@ Cole = {
 						allowOutsideClick: false,
 					}).then((result) => {
 						if (result.value){
+							$('body').removeClass('NoSide');
 							$('ul.Modules li a[data-module=' + module + ']').click();
 						}
 					});
@@ -337,6 +348,7 @@ Cole = {
 						allowOutsideClick: false,
 					}).then((result) => {
 						if (result.value){
+							$('body').removeClass('NoSide');
 							$('ul.Modules li a[data-module=' + module + ']').click();
 						}
 					});			    
@@ -350,6 +362,7 @@ Cole = {
 					allowOutsideClick: false,
 				}).then((result) => {
 					if (result.value){
+						$('body').removeClass('NoSide');
 						$('ul.Modules li a[data-module=' + module + ']').click();
 					}
 				});
@@ -957,6 +970,7 @@ $('body').on('click', 'div.EditModule .ColeEditToolbar .ColeCancelTrigger', func
 		allowOutsideClick: false,
 	}).then((result) => {
 		if (result.value){
+			$('body').removeClass('NoSide');
 			$('ul.Modules li a[data-module=' + Module + ']').click();
 		}
 	});	
