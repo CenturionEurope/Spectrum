@@ -164,7 +164,7 @@ if (strpos(url()->full(), '://cole.') !== false) {
 			}else{
 				$EditMode = false;
 			}
-			$Cole = app('App\Http\Controllers\Cole\ColeController')->PageConstructor($Url,$EditMode);
+			$Cole = app('App\Http\Controllers\Cole\ColeTools')->PageConstructor($Url,$EditMode);
 			if(isset($_GET['ColeJSON'])){
 				return response()->json($Cole);
 			}else{
@@ -178,13 +178,13 @@ if (strpos(url()->full(), '://cole.') !== false) {
 	\View::composer('errors::404', function($view)
 	{
 		// Ensure the Cole Object comes in even in 404 instances
-		$Cole = app('App\Http\Controllers\Cole\ColeController')->PageConstructor('404');
+		$Cole = app('App\Http\Controllers\Cole\ColeTools')->PageConstructor('404');
 		$view->with('Cole', $Cole);
 	});
 	\View::composer('errors::503', function($view)
 	{
 		// Ensure the Cole Object comes in even in 404 instances
-		$Cole = app('App\Http\Controllers\Cole\ColeController')->PageConstructor('404');
+		$Cole = app('App\Http\Controllers\Cole\ColeTools')->PageConstructor('404');
 		$view->with('Cole', $Cole);
 	});
 
@@ -206,7 +206,7 @@ if (strpos(url()->full(), '://cole.') !== false) {
 	Route::get('/Cole/Update/Run', ['uses' =>'Cole\ColeController@ProcessUpdate']); // construct module
 
 	// ** CUSTOM ROUTES FOR THIS SITE **
-	if(!file_exists('cole.php')){
+	if(file_exists('cole.php')){
 		include('cole.php');
 	}
 
