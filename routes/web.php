@@ -10,109 +10,205 @@
 */
 
 // Main User Interface
-Route::get('/', function () {
 
-	app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed
-	app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(); // Check Cole needs to update
-		
-	$ColeUser = (object)app('App\Http\Controllers\Cole\ColeController')->AccountDetails();
-	
-	if(isset($ColeUser->id)){
-		$Cole = (object)array(
-			'Modules' => app('App\Http\Controllers\Cole\ColeController')->GetModules(),
-			'User' => $ColeUser,
-			'Settings' => app('App\Http\Controllers\Cole\ColeController')->Settings(),
-			'PageReference' => 'MainUI',
-			'Notifications' => app('App\Http\Controllers\Cole\ColeController')->Notifications(),
-			'NotificationsList' => app('App\Http\Controllers\Cole\ColeController')->NotificationsList(),
+if (strpos(url()->full(), 'cole.') !== false) {
+
+	Route::get('/', function () {
+
+		app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed
+		app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(); // Check Cole needs to update
 			
-		);
-		$View = 'Cole.MainUI';
-	}else{
-		$Cole = (object)array(
-			'Settings' => app('App\Http\Controllers\Cole\ColeController')->Settings(),
-			'PageReference' => 'Login'
-		);
-		$View = 'Cole.Login';		
-	}
-	
-    return View::make($View)->with('Cole', $Cole);
-});
-
-// Basic pages
-Route::get('/what-is-cole', function () {
-	app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed
-	app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(); // Check Cole needs to update
+		$ColeUser = (object)app('App\Http\Controllers\Cole\ColeController')->AccountDetails();
 		
-    $Cole = (object)array(
-	    'PageReference' => 'what-is-cole'
-    );
-    return View::make('Cole.AboutCole')->with('Cole', $Cole);
-});
-Route::get('/credits', function () {
-	app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed	
-    $Cole = (object)array(
-	    'PageReference' => 'credits'
-    );
-    return View::make('Cole.Credits')->with('Cole', $Cole);
-});
-Route::get('/install', function () {	
-	app('App\Http\Controllers\Cole\ColeController')->InstallCheck(true); // Check Cole is installed	
-    $Cole = (object)array(
-	    'PageReference' => 'install'
-    );
-    return View::make('Cole.Install')->with('Cole', $Cole);
-});
-Route::get('/update', function () {	
-	app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(true); // Check Cole needs to update	
-    $Cole = (object)array(
-	    'PageReference' => 'update'
-    );
-    return View::make('Cole.Update')->with('Cole', $Cole);
-});
+		if(isset($ColeUser->id)){
+			$Cole = (object)array(
+				'Modules' => app('App\Http\Controllers\Cole\ColeController')->GetModules(),
+				'User' => $ColeUser,
+				'Settings' => app('App\Http\Controllers\Cole\ColeController')->Settings(),
+				'PageReference' => 'MainUI',
+				'Notifications' => app('App\Http\Controllers\Cole\ColeController')->Notifications(),
+				'NotificationsList' => app('App\Http\Controllers\Cole\ColeController')->NotificationsList(),
+				
+			);
+			$View = 'Cole.MainUI';
+		}else{
+			$Cole = (object)array(
+				'Settings' => app('App\Http\Controllers\Cole\ColeController')->Settings(),
+				'PageReference' => 'Login'
+			);
+			$View = 'Cole.Login';		
+		}
+		
+		return View::make($View)->with('Cole', $Cole);
+	});
 
-// Constructors
-Route::get('/Module/{ModuleCodename}', ['uses' =>'Cole\ColeController@ConstructModule']); // construct module
-Route::post('/Construct/EditPane/{Special?}', ['uses' =>'Cole\ColeController@ConstructEditPane']); // construct edit pane
-Route::get('/Error/{ErrorCode}', ['uses' =>'Cole\ColeController@ConstructError']); // construct error message
-Route::get('/Cole/Logo', ['uses' =>'Cole\ColeController@ColeBranding']); // construct error message
-\View::composer('Cole::errors::500', function($view){
-    $Cole = (object)array(
-	    'PageReference' => 'error500'
-    );
-    $view->with('Cole', $Cole);
-});
+	// Basic pages
+	Route::get('/what-is-cole', function () {
+		app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed
+		app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(); // Check Cole needs to update
+			
+		$Cole = (object)array(
+			'PageReference' => 'what-is-cole'
+		);
+		return View::make('Cole.AboutCole')->with('Cole', $Cole);
+	});
+	Route::get('/credits', function () {
+		app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed	
+		$Cole = (object)array(
+			'PageReference' => 'credits'
+		);
+		return View::make('Cole.Credits')->with('Cole', $Cole);
+	});
+	Route::get('/install', function () {	
+		app('App\Http\Controllers\Cole\ColeController')->InstallCheck(true); // Check Cole is installed	
+		$Cole = (object)array(
+			'PageReference' => 'install'
+		);
+		return View::make('Cole.Install')->with('Cole', $Cole);
+	});
+	Route::get('/update', function () {	
+		app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(true); // Check Cole needs to update	
+		$Cole = (object)array(
+			'PageReference' => 'update'
+		);
+		return View::make('Cole.Update')->with('Cole', $Cole);
+	});
 
-// DataActions
-Route::any('/DataAction/{ModuleCodename}/{DataAction}/{ObjectID?}', ['uses' =>'Cole\ColeController@ConstructDataAction']);
+	// Constructors
+	Route::get('/Module/{ModuleCodename}', ['uses' =>'Cole\ColeController@ConstructModule']); // construct module
+	Route::post('/Construct/EditPane/{Special?}', ['uses' =>'Cole\ColeController@ConstructEditPane']); // construct edit pane
+	Route::get('/Error/{ErrorCode}', ['uses' =>'Cole\ColeController@ConstructError']); // construct error message
+	Route::get('/Cole/Logo', ['uses' =>'Cole\ColeController@ColeBranding']); // construct error message
+	\View::composer('Cole::errors::500', function($view){
+		$Cole = (object)array(
+			'PageReference' => 'error500'
+		);
+		$view->with('Cole', $Cole);
+	});
 
-// Accounts
-Route::post('/ColeAccounts/Login', ['uses' =>'Cole\ColeController@AccountLogin']);
-Route::get('/ColeAccounts/Logout', ['uses' =>'Cole\ColeController@AccountLogout']);
-Route::get('/ColeAccounts/AccountProfilePicture', ['uses' =>'Cole\ColeController@AccountProfilePicture']);
-Route::post('/ColeAccounts/SetProfilePicture', ['uses' =>'Cole\ColeController@SetProfilePicture']);
+	// DataActions
+	Route::any('/DataAction/{ModuleCodename}/{DataAction}/{ObjectID?}', ['uses' =>'Cole\ColeController@ConstructDataAction']);
 
-// Me
-Route::get('/Cole/Me/Banner', ['uses' =>'Cole\ColeController@MeBanner']);
-Route::post('/Cole/Permissions/Save', ['uses' =>'Cole\ColeController@SavePermissions']);
+	// Accounts
+	Route::post('/ColeAccounts/Login', ['uses' =>'Cole\ColeController@AccountLogin']);
+	Route::get('/ColeAccounts/Logout', ['uses' =>'Cole\ColeController@AccountLogout']);
+	Route::get('/ColeAccounts/AccountProfilePicture', ['uses' =>'Cole\ColeController@AccountProfilePicture']);
+	Route::post('/ColeAccounts/SetProfilePicture', ['uses' =>'Cole\ColeController@SetProfilePicture']);
 
-// Update
-Route::get('/Cole/Update/Query', ['uses' =>'Cole\ColeController@UpdateQuery']); // construct module
-Route::get('/Cole/Update/Run', ['uses' =>'Cole\ColeController@ProcessUpdate']); // construct module
-Route::get('/Cole/GitHub', ['uses' =>'Cole\ColeController@GitHubTest']); // construct module
+	// Me
+	Route::get('/Cole/Me/Banner', ['uses' =>'Cole\ColeController@MeBanner']);
+	Route::post('/Cole/Permissions/Save', ['uses' =>'Cole\ColeController@SavePermissions']);
 
-
-// Settings
-Route::post('/Cole/Settings/Publish', ['uses' =>'Cole\ColeController@PublishSettings']);
-
-// Images
-Route::post('/Cole/ImageToolkit/GetMeta', ['uses' =>'Cole\Cole\Modules\ImagesController@GetMeta']);
-Route::post('/Cole/ImageToolkit/SaveMeta', ['uses' =>'Cole\Cole\Modules\ImagesController@SaveMeta']);
-Route::post('/Cole/ImageToolkit/GetTweaks', ['uses' =>'Cole\Cole\Modules\ImagesController@GetTweaks']);
-Route::post('/Cole/ImageToolkit/SaveTweaks', ['uses' =>'Cole\Cole\Modules\ImagesController@SaveTweaks']);
-Route::post('/Cole/ImageToolkit/ResetImage', ['uses' =>'Cole\Cole\Modules\ImagesController@ResetImage']);
+	// Update
+	Route::get('/Cole/Update/Query', ['uses' =>'Cole\ColeController@UpdateQuery']); // construct module
+	Route::get('/Cole/Update/Run', ['uses' =>'Cole\ColeController@ProcessUpdate']); // construct module
+	Route::get('/Cole/GitHub', ['uses' =>'Cole\ColeController@GitHubTest']); // construct module
 
 
-// Install
-Route::post('/Cole/Install', ['uses' =>'Cole\ColeController@InstallCole']);
-Route::get('/Cole/Install/Reset', ['uses' =>'Cole\ColeController@ResetCole']);
+	// Settings
+	Route::post('/Cole/Settings/Publish', ['uses' =>'Cole\ColeController@PublishSettings']);
+
+	// Images
+	Route::post('/Cole/ImageToolkit/GetMeta', ['uses' =>'Cole\Cole\Modules\ImagesController@GetMeta']);
+	Route::post('/Cole/ImageToolkit/SaveMeta', ['uses' =>'Cole\Cole\Modules\ImagesController@SaveMeta']);
+	Route::post('/Cole/ImageToolkit/GetTweaks', ['uses' =>'Cole\Cole\Modules\ImagesController@GetTweaks']);
+	Route::post('/Cole/ImageToolkit/SaveTweaks', ['uses' =>'Cole\Cole\Modules\ImagesController@SaveTweaks']);
+	Route::post('/Cole/ImageToolkit/ResetImage', ['uses' =>'Cole\Cole\Modules\ImagesController@ResetImage']);
+
+
+	// Install
+	Route::post('/Cole/Install', ['uses' =>'Cole\ColeController@InstallCole']);
+	Route::get('/Cole/Install/Reset', ['uses' =>'Cole\ColeController@ResetCole']);
+
+}else{
+	
+	try {
+		$Pages = \DB::table("ColeMod_Pages")
+		->get();
+	}
+	catch (\Exception $e) {
+		abort(401,'Cole was unable to load the pages database table. Please check that you have configured your .env file correctly.');
+	}
+
+	if(count($Pages)==0){
+		abort(401,'You do not have any pages in your Pages database table. You need at least one to start your Cole website');
+	}
+
+	foreach($Pages as $Page){
+
+		Route::any($Page->Url, function () {
+
+			$Url = Route::getFacadeRoot()->current()->uri();
+
+			if(empty($Url)){
+				$Url = '/';
+			}
+
+			$PageToploader = \DB::table('ColeMod_Pages')
+			->where('Url',$Url)
+			->first();
+			$Template = $PageToploader->Template;
+			$AccountLocked = $PageToploader->AccountLocked;
+
+			if(isset($_GET['ColeEdit'])){
+				// Check for secret match
+				$AffectorLookup = \DB::table('Users')
+				->where('id',$_GET['Affector'])
+				->where('Secret',$_GET['ColeEdit'])
+				->get();
+
+				if(count($AffectorLookup)!=0){
+					$EditMode = true;
+				}else{
+					$EditMode = false;
+				}
+			}else{
+				$EditMode = false;
+			}
+			$Cole = app('App\Http\Controllers\Cole\ColeController')->PageConstructor($Url,$EditMode);
+			if(isset($_GET['ColeJSON'])){
+				return response()->json($Cole);
+			}else{
+				return View::make($Template)->with('Cole',$Cole);
+			}
+		});
+
+	}
+
+	// Errors
+	\View::composer('errors::404', function($view)
+	{
+		// Ensure the Cole Object comes in even in 404 instances
+		$Cole = app('App\Http\Controllers\Cole\ColeController')->PageConstructor('404');
+		$view->with('Cole', $Cole);
+	});
+	\View::composer('errors::503', function($view)
+	{
+		// Ensure the Cole Object comes in even in 404 instances
+		$Cole = app('App\Http\Controllers\Cole\ColeController')->PageConstructor('404');
+		$view->with('Cole', $Cole);
+	});
+
+
+	// Images subsystem
+	Route::get('/Cole/Pages/Images/{Tag}/{Width?}/{Height?}', ['uses' =>'Cole\ColeController@ColeImage']);
+	Route::get('/Cole/Pages/ImgBrowse/{Path?}', ['uses' =>'Cole\ColeController@ColeImageBrowse']);
+	Route::post('/Cole/Pages/ImgSave', ['uses' =>'Cole\ColeController@ColeImageSave']);
+	Route::post('/Cole/Pages/ImgFolderMake', ['uses' =>'Cole\ColeController@ColeImageFolderMake']);
+	Route::post('/Cole/Pages/ImgUpload', ['uses' =>'Cole\ColeController@ColeImageUpload']);
+	Route::get('/Cole/Pages/ImgPickerThumbnail', ['uses' =>'Cole\ColeController@ColeImagePickerThumbnail']);
+	Route::post('/Cole/Pages/ImgMoveFile', ['uses' =>'Cole\ColeController@ColeImagePickerMoveFile']);
+
+	// Panels subsystem
+	Route::any('/Cole/Panels/Load', ['uses' =>'Cole\ColeController@LoadPanel']);
+
+	// ColeTools Update
+	Route::get('/Cole/Update/Query', ['uses' =>'Cole\ColeController@UpdateQuery']);
+	Route::get('/Cole/Update/Run', ['uses' =>'Cole\ColeController@ProcessUpdate']); // construct module
+
+	// ** CUSTOM ROUTES FOR THIS SITE **
+	if(!file_exists('cole.php')){
+		include('cole.php');
+	}
+
+}

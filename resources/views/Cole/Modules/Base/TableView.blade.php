@@ -15,11 +15,8 @@
 
                                 <li><a href="#" class="CreateItem" data-module="<?php echo $Cole->Module->ModuleData->Codename; ?>"><i class="zmdi zmdi-file-plus"></i> Create</a></li>
                             </ul>
-                        </div>
-
-                        
-                        @include('Cole/Prebuilt/DatabaseTable')
-                       
+                        </div>                        
+                        @include('Cole/Prebuilt/DatabaseTable')                       
                     </div>
                 </div><!-- end col -->
             </div>
