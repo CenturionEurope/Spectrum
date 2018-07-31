@@ -19,3 +19,5 @@ yarn-error.log
 /public/Cole/Storage/ProfilePictures/*.jpg
 .env_backup
 /resources/views/Site
+/public/Site
+/app/Http/Controllers/Site
