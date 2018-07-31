@@ -47,7 +47,7 @@
 
                         			<h4 class="header-title m-t-0 m-b-30">Other Cole Users</h4>
 									
-									@include('Prebuilt/DatabaseTable')
+									@include('Cole.Prebuilt.DatabaseTable')
 									
 									
                                    

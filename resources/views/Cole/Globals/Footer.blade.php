@@ -27,7 +27,7 @@
 		 
 		 @isset($Cole->User)
 			@if(!empty($Cole->Settings->Timeout))
-				@include('Prebuilt.Timeout')
+				@include('Cole.Prebuilt.Timeout')
 			@endif
 		 @endisset
        

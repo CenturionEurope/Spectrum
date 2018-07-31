@@ -10,8 +10,7 @@
 */
 
 // Main User Interface
-
-if (strpos(url()->full(), 'cole.') !== false) {
+if (strpos(url()->full(), '://cole.') !== false) {
 
 	Route::get('/', function () {
 
@@ -121,7 +120,7 @@ if (strpos(url()->full(), 'cole.') !== false) {
 	Route::get('/Cole/Install/Reset', ['uses' =>'Cole\ColeController@ResetCole']);
 
 }else{
-	
+
 	try {
 		$Pages = \DB::table("ColeMod_Pages")
 		->get();

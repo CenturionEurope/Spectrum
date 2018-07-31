@@ -142,6 +142,6 @@
 ?>
 @endforeach
 @if($Cole['Data']['ModuleCodename']=="me")	
-	@include('Prebuilt.ProfilePicture')
-	@include('Prebuilt.Permissions')
+	@include('Cole.Prebuilt.ProfilePicture')
+	@include('Cole.Prebuilt.Permissions')
 @endif
