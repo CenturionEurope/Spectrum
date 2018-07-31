@@ -297,16 +297,16 @@ class ColeController extends Controller
 		}
 		
 		if($ModuleData->Custom==1){
-			if(view()->exists('Modules.Custom.'.$ModuleData->Template)){
-				return \View::make('Modules.Custom.'.$ModuleData->Template)->with('Cole', $Cole);
+			if(view()->exists('Cole.Modules.Custom.'.$ModuleData->Template)){
+				return \View::make('Cole.Modules.Custom.'.$ModuleData->Template)->with('Cole', $Cole);
 			}else{
-				return \View::make('Modules.Base.TableView')->with('Cole', $Cole);
+				return \View::make('Cole.Modules.Base.TableView')->with('Cole', $Cole);
 			}
 		}else{
-			if(view()->exists('Modules.'.$ModuleData->Template)){
-				return \View::make('Modules.'.$ModuleData->Template)->with('Cole', $Cole);
+			if(view()->exists('Cole.Modules.'.$ModuleData->Template)){
+				return \View::make('Cole.Modules.'.$ModuleData->Template)->with('Cole', $Cole);
 			}else{
-				return \View::make('Modules.Base.TableView')->with('Cole', $Cole);
+				return \View::make('Cole.Modules.Base.TableView')->with('Cole', $Cole);
 			}
 		}
     }
@@ -322,7 +322,7 @@ class ColeController extends Controller
 		}
 
 		if(!isset($ModuleData->EditView)){
-			$View = 'Prebuilt/EditPane';
+			$View = 'Cole/Prebuilt/EditPane';
 		}else{
 			$View = $ModuleData->EditView;
 		}

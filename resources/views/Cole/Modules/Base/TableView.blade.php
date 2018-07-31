@@ -18,7 +18,7 @@
                         </div>
 
                         
-                        @include('Prebuilt/DatabaseTable')
+                        @include('Cole/Prebuilt/DatabaseTable')
                        
                     </div>
                 </div><!-- end col -->

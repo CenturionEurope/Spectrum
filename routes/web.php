@@ -27,13 +27,13 @@ Route::get('/', function () {
 			'NotificationsList' => app('App\Http\Controllers\Cole\ColeController')->NotificationsList(),
 			
 		);
-		$View = 'MainUI';
+		$View = 'Cole.MainUI';
 	}else{
 		$Cole = (object)array(
 			'Settings' => app('App\Http\Controllers\Cole\ColeController')->Settings(),
 			'PageReference' => 'Login'
 		);
-		$View = 'Login';		
+		$View = 'Cole.Login';		
 	}
 	
     return View::make($View)->with('Cole', $Cole);
@@ -47,28 +47,28 @@ Route::get('/what-is-cole', function () {
     $Cole = (object)array(
 	    'PageReference' => 'what-is-cole'
     );
-    return View::make('AboutCole')->with('Cole', $Cole);
+    return View::make('Cole.AboutCole')->with('Cole', $Cole);
 });
 Route::get('/credits', function () {
 	app('App\Http\Controllers\Cole\ColeController')->InstallCheck(); // Check Cole is installed	
     $Cole = (object)array(
 	    'PageReference' => 'credits'
     );
-    return View::make('Credits')->with('Cole', $Cole);
+    return View::make('Cole.Credits')->with('Cole', $Cole);
 });
 Route::get('/install', function () {	
 	app('App\Http\Controllers\Cole\ColeController')->InstallCheck(true); // Check Cole is installed	
     $Cole = (object)array(
 	    'PageReference' => 'install'
     );
-    return View::make('Install')->with('Cole', $Cole);
+    return View::make('Cole.Install')->with('Cole', $Cole);
 });
 Route::get('/update', function () {	
 	app('App\Http\Controllers\Cole\ColeController')->UpdateCheck(true); // Check Cole needs to update	
     $Cole = (object)array(
 	    'PageReference' => 'update'
     );
-    return View::make('Update')->with('Cole', $Cole);
+    return View::make('Cole.Update')->with('Cole', $Cole);
 });
 
 // Constructors
@@ -76,7 +76,7 @@ Route::get('/Module/{ModuleCodename}', ['uses' =>'Cole\ColeController@ConstructM
 Route::post('/Construct/EditPane/{Special?}', ['uses' =>'Cole\ColeController@ConstructEditPane']); // construct edit pane
 Route::get('/Error/{ErrorCode}', ['uses' =>'Cole\ColeController@ConstructError']); // construct error message
 Route::get('/Cole/Logo', ['uses' =>'Cole\ColeController@ColeBranding']); // construct error message
-\View::composer('errors::500', function($view){
+\View::composer('Cole::errors::500', function($view){
     $Cole = (object)array(
 	    'PageReference' => 'error500'
     );

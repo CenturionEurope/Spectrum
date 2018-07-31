@@ -1,4 +1,4 @@
-@include('Globals.Header')
+@include('Cole.Globals.Header')
 
 @php
 	$Images = scandir('Cole/Images/Heros');
@@ -70,4 +70,4 @@
             <!-- end card-box-->
         </div>
             
-@include('Globals.Footer')
+@include('Cole.Globals.Footer')

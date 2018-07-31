@@ -1,7 +1,7 @@
 @if(!file_exists('../.env'))
 
 
-@include('Globals.Header')
+@include('Cole.Globals.Header')
 
         <div class="account-pages"></div>
         <div class="clearfix"></div>
@@ -19,7 +19,7 @@
 
         </div>
             
-@include('Globals.Footer')
+@include('Cole.Globals.Footer')
 
 		@php
 			die();

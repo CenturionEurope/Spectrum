@@ -1,4 +1,4 @@
-@include('Globals.Header')
+@include('Cole.Globals.Header')
 <div class="clearfix"></div>
 <div class="wrapper-page Login">
     <div class="text-center">
@@ -47,4 +47,4 @@
         </div>
     </div>
 </div>
-@include('Globals.Footer')
+@include('Cole.Globals.Footer')

@@ -1,4 +1,4 @@
-@include('Globals.Header')
+@include('Cole.Globals.Header')
 
 <div class="AboutCole">
 	<div style="width: 60%;">
@@ -16,4 +16,4 @@
 </div>
 
             
-@include('Globals.Footer')
+@include('Cole.Globals.Footer')

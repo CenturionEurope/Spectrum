@@ -19,6 +19,9 @@
                 	</div>
 
 					@foreach($Cole->Module->Widgets as $Widget)
+						@php
+							$Widget->Blade = 'Cole.'.$Widget->Blade;
+						@endphp
 						@include($Widget->Blade)
 					@endforeach
 					

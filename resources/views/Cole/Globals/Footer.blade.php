@@ -1,5 +1,5 @@
 
-@include('Globals.Notifications')
+@include('Cole.Globals.Notifications')
 </div>
 
      </div>
