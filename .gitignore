@@ -17,3 +17,4 @@ yarn-error.log
 /public/Cole/Javascript/Modules/Custom/*.js
 /public/Cole/LESS/*.cache
 /public/Storage/ProfilePictures/*.jpg
+.env_backup
