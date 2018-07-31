@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Cole;
 use App\Http\Controllers\Controller;
 use Image;
 use Illuminate\Database\Schema\Blueprint;
@@ -1023,7 +1023,7 @@ class ColeController extends Controller
 			
 		}else{
 			// ENV File configured. Now import to the newly configured database
-			app('App\Http\Controllers\ColeCore\DatabaseController')->DatabaseInitialise();
+			app('App\Http\Controllers\Cole\Core\DatabaseController')->DatabaseInitialise();
 			
 			// Database configured. Now setup a user
 			DB::table('Users')

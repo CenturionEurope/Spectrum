@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ColeControllers;
+namespace App\Http\Controllers\Cole\Modules;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\Schema\Blueprint;
 use DB;

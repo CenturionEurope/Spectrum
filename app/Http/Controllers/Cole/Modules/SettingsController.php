@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ColeControllers;
+namespace App\Http\Controllers\Cole\Modules;
 use App\Http\Controllers\Controller;
 
 
@@ -21,7 +21,7 @@ class SettingsController extends Controller
 		
 		$API = (object)array(
 			'Outcome' => 'Success',
-			'SettingsConstruct' => app('App\Http\Controllers\ColeControllers\SettingsController')->SettingsConstruct()
+			'SettingsConstruct' => app('App\Http\Controllers\Cole\Modules\SettingsController')->SettingsConstruct()
 		);
 		
 		return $API;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ColeControllers;
+namespace App\Http\Controllers\Cole\Modules;
 use App\Http\Controllers\Controller;
 use Spatie\Analytics\Period;
 use Analytics;
@@ -23,7 +23,7 @@ class AnalyticsController extends Controller
 		
 		$API = (object)array(
 			'Outcome' => 'Success',
-			'AnalyticsConstruct' => app('App\Http\Controllers\ColeControllers\AnalyticsController')->AnalyticsConstruct()
+			'AnalyticsConstruct' => app('App\Http\Controllers\Cole\Modules\AnalyticsController')->AnalyticsConstruct()
 		);
 		
 		return $API;
