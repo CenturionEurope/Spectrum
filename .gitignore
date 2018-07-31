@@ -18,4 +18,3 @@ yarn-error.log
 /public/Cole/LESS/*.cache
 /public/Cole/Storage/ProfilePictures/*.jpg
 .env_backup
-/resources/views/Site
