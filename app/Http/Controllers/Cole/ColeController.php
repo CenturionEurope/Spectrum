@@ -8,6 +8,8 @@ use Spatie\Analytics\Period;
 use Analytics;
 use PragmaRX\Google2FA\Google2FA;
 use DB;
+use Illuminate\Support\Facades\Cache;
+
 
 class ColeController extends Controller
 {
@@ -1414,6 +1416,8 @@ class ColeController extends Controller
 		return $Notifications;
 	}
 
+	
+	
 
 
 
