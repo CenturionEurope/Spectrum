@@ -19,7 +19,7 @@ class MeController extends Controller
 
 	
 	public function ColeGetPlugin($Object){
-		$ActivityLog = (object)app('App\Http\Controllers\ColeController')->ActivityLog(); // load activityfeed
+		$ActivityLog = (object)app('App\Http\Controllers\Cole\ColeController')->ActivityLog(); // load activityfeed
 
 		$API = array(
 			'Outcome' => 'Success',
@@ -28,7 +28,7 @@ class MeController extends Controller
 		);
 		
 		if(isset($Object->id)){
-			$API['UserPermissions'] = (object)app('App\Http\Controllers\ColeController')->GetPermissionsModule($Object);
+			$API['UserPermissions'] = (object)app('App\Http\Controllers\Cole\ColeController')->GetPermissionsModule($Object);
 		}
 		
 		return (object)$API;
@@ -60,13 +60,13 @@ class MeController extends Controller
 		
 		return (object)array(
 			'Saved' => $Object[0],
-			'ActiveUser' => app('App\Http\Controllers\ColeController')->AccountDetails()
+			'ActiveUser' => app('App\Http\Controllers\Cole\ColeController')->AccountDetails()
 		);
 		
 	}
 	
 	public function ProfilePictureUpload(){
-		$User = (object)app('App\Http\Controllers\ColeController')->AccountDetails();
+		$User = (object)app('App\Http\Controllers\Cole\ColeController')->AccountDetails();
 		$data = array();
 
 		

@@ -2,5 +2,5 @@ CREATE TABLE `Help` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Category` in
 INSERT INTO `Help` (`id`, `Category`, `Title`, `Score`, `Template`) VALUES (1,1,'User Accounts',1,'Help.Basics.Accounts');
 CREATE TABLE `Help_Categories` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`Title` varchar(100) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 INSERT INTO `Help_Categories` (`id`, `Title`) VALUES (1,'Cole Basics');
-INSERT INTO `Modules` (`ModuleName`, `Codename`, `Controller`, `Database`, `Template`, `Icon`, `Custom`) VALUES ('Help','help','App\\Http\\Controllers\\ColeControllers\\HelpController','Help','help','zmdi-help',0);
+INSERT INTO `Modules` (`ModuleName`, `Codename`, `Controller`, `Database`, `Template`, `Icon`, `Custom`) VALUES ('Help','help','App\\Http\\Controllers\\Cole\\Modules\\HelpController','Help','help','zmdi-help',0);
 UPDATE Settings SET settingValue='4.9.7' WHERE settingCodename='SystemVersion';

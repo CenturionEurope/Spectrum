@@ -11,7 +11,7 @@ yarn-error.log
 .env
 *.1
 *.cache
-/app/Http/Controllers/ColeControllers/Custom/*.php
+/app/Http/Controllers/Cole/Modules/Custom/*.php
 /resources/views/Modules/Custom/*.blade.php
 /resources/views/Widgets/Custom/*.blade.php
 /public/Cole/Javascript/Modules/Custom/*.js

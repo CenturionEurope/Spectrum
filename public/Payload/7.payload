@@ -21,4 +21,4 @@ CREATE TABLE `Widgets` (
 
 INSERT INTO `Widgets` (`id`, `Title`, `Controller`, `Function`, `Blade`) VALUES (1,'Server Storage','App\\Http\\Controllers\\WidgetsController','Storage','Widgets.Storage');
 
-UPDATE Modules SET ModuleName='Today',Codename='today',Controller='App\Http\Controllers\ColeControllers\TodayController',`Database`='ColeMod_Today',Template='today' WHERE Codename='dashboard';
+UPDATE Modules SET ModuleName='Today',Codename='today',Controller='App\Http\Controllers\Cole\Cole\Modules\TodayController',`Database`='ColeMod_Today',Template='today' WHERE Codename='dashboard';

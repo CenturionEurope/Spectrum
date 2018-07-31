@@ -188,7 +188,7 @@ class DatabaseController extends Controller
 			    [
 					'ModuleName' => 'Today',
 					'Codename' => 'today',
-					'Controller' => 'App\Http\Controllers\ColeControllers\TodayController',
+					'Controller' => 'App\Http\Controllers\Cole\Modules\TodayController',
 					'Database' => null,
 					'Template' => 'today',
 					'Icon' => null
@@ -196,7 +196,7 @@ class DatabaseController extends Controller
 				[
 					'ModuleName' => 'Me',
 					'Codename' => 'me',
-					'Controller' => 'App\Http\Controllers\ColeControllers\MeController',
+					'Controller' => 'App\Http\Controllers\Cole\Modules\MeController',
 					'Database' => 'Users',
 					'Template' => 'me',
 					'Icon' => 'zmdi-face'
@@ -204,7 +204,7 @@ class DatabaseController extends Controller
 				[
 					'ModuleName' => 'Edit Pages',
 					'Codename' => 'pages',
-					'Controller' => 'App\Http\Controllers\ColeControllers\PagesController',
+					'Controller' => 'App\Http\Controllers\Cole\Modules\PagesController',
 					'Database' => 'ColeMod_Pages',
 					'Template' => 'pages',
 					'Icon' => 'zmdi-edit'
@@ -212,7 +212,7 @@ class DatabaseController extends Controller
 				[
 					'ModuleName' => 'Settings',
 					'Codename' => 'settings',
-					'Controller' => 'App\Http\Controllers\ColeControllers\SettingsController',
+					'Controller' => 'App\Http\Controllers\Cole\Modules\SettingsController',
 					'Database' => 'Settings',
 					'Template' => 'settings',
 					'Icon' => 'zmdi-settings'
@@ -220,7 +220,7 @@ class DatabaseController extends Controller
 				[
 					'ModuleName' => 'Images',
 					'Codename' => 'images',
-					'Controller' => 'App\Http\Controllers\ColeControllers\ImagesController',
+					'Controller' => 'App\Http\Controllers\Cole\Modules\ImagesController',
 					'Database' => 'ColeMod_Pages_Images',
 					'Template' => 'images',
 					'Icon' => 'zmdi-image'

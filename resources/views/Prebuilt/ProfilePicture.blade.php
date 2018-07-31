@@ -1,5 +1,5 @@
 @isset($Cole['Data']['Content']['id'])
-    @if($Cole['Data']['Content']['id'] == app('App\Http\Controllers\ColeController')->AccountDetails()->id)
+    @if($Cole['Data']['Content']['id'] == app('App\Http\Controllers\Cole\ColeController')->AccountDetails()->id)
         <label>Set profile picture</label>
         <div class="ProfilePictures">
             

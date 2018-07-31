@@ -36,7 +36,7 @@ class ImagesController extends Controller
 	public function ColeGetPlugin($Object){
 		// Ask the frontend for the base path
 
-		$Settings = app('App\Http\Controllers\ColeController')->Settings();
+		$Settings = app('App\Http\Controllers\Cole\ColeController')->Settings();
 		
 		$Images = \DB::table('ColeMod_Pages_Images')
 		->get();

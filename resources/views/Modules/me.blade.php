@@ -22,7 +22,7 @@
                                         <div class="comment-body">
                                             <div class="comment-text">
                                                 <div class="comment-header">
-                                                    <a href="#" title="">{{ $LogItem->AccountData->FullName }}</a><span>{!! app('App\Http\Controllers\ColeController')->Ago(gmdate("Y-m-d\TH:i:s\Z", $LogItem->Time)) !!}</span>
+                                                    <a href="#" title="">{{ $LogItem->AccountData->FullName }}</a><span>{!! app('App\Http\Controllers\Cole\ColeController')->Ago(gmdate("Y-m-d\TH:i:s\Z", $LogItem->Time)) !!}</span>
                                                 </div>
                                                 {{ $LogItem->AccountData->FullName }} {{ $LogItem->DataAction }} an item in the {{ $LogItem->ModuleUpdated }} module.
                                             </div>

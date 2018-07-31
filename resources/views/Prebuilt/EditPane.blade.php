@@ -124,7 +124,7 @@
 			echo '<input autocomplete="off" data-lpignore="true" class="form-control isURL" id="'.$Key.'" type="text" placeholder="'.$KeyName.'" value="'.$Value.'">';
 		}else if($MatchingTVM['isTemplatePicker']==1){
 			echo '<select class="form-control" id="'.$Key.'">';
-				foreach(app('App\Http\Controllers\ColeControllers\PagesController')->PageTemplates() as $Template){
+				foreach(app('App\Http\Controllers\Cole\Cole\Modules\PagesController')->PageTemplates() as $Template){
 					echo '<option value="'.$Template->Template.'"'; if($Value==$Template->Template){echo ' selected';} echo '>'.$Template->Template.'</option>';
 				}
 			echo '</select>';		

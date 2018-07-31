@@ -106,11 +106,11 @@ Route::get('/Cole/GitHub', ['uses' =>'Cole\ColeController@GitHubTest']); // cons
 Route::post('/Cole/Settings/Publish', ['uses' =>'Cole\ColeController@PublishSettings']);
 
 // Images
-Route::post('/Cole/ImageToolkit/GetMeta', ['uses' =>'Cole\ColeControllers\ImagesController@GetMeta']);
-Route::post('/Cole/ImageToolkit/SaveMeta', ['uses' =>'Cole\ColeControllers\ImagesController@SaveMeta']);
-Route::post('/Cole/ImageToolkit/GetTweaks', ['uses' =>'Cole\ColeControllers\ImagesController@GetTweaks']);
-Route::post('/Cole/ImageToolkit/SaveTweaks', ['uses' =>'Cole\ColeControllers\ImagesController@SaveTweaks']);
-Route::post('/Cole/ImageToolkit/ResetImage', ['uses' =>'Cole\ColeControllers\ImagesController@ResetImage']);
+Route::post('/Cole/ImageToolkit/GetMeta', ['uses' =>'Cole\Cole\Modules\ImagesController@GetMeta']);
+Route::post('/Cole/ImageToolkit/SaveMeta', ['uses' =>'Cole\Cole\Modules\ImagesController@SaveMeta']);
+Route::post('/Cole/ImageToolkit/GetTweaks', ['uses' =>'Cole\Cole\Modules\ImagesController@GetTweaks']);
+Route::post('/Cole/ImageToolkit/SaveTweaks', ['uses' =>'Cole\Cole\Modules\ImagesController@SaveTweaks']);
+Route::post('/Cole/ImageToolkit/ResetImage', ['uses' =>'Cole\Cole\Modules\ImagesController@ResetImage']);
 
 
 // Install

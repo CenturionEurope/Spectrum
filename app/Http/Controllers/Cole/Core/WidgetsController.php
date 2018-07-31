@@ -31,9 +31,9 @@ class WidgetsController extends Controller
 		$dp = sprintf('%.2f',($du / $dt) * 100);
 		
 		/* and we formate the size from bytes to MB, GB, etc. */
-		$df = app('App\Http\Controllers\ColeController')->FormatSize($df);
-		$du = app('App\Http\Controllers\ColeController')->FormatSize($du);
-		$dt = app('App\Http\Controllers\ColeController')->FormatSize($dt);
+		$df = app('App\Http\Controllers\Cole\ColeController')->FormatSize($df);
+		$du = app('App\Http\Controllers\Cole\ColeController')->FormatSize($du);
+		$dt = app('App\Http\Controllers\Cole\ColeController')->FormatSize($dt);
 		
 		
 		if($dp<60){
@@ -93,7 +93,7 @@ class WidgetsController extends Controller
 		->first();
 		$UpdatedAgo = date('m/d/Y H:i:s', $UpdatedAgo->settingValue);
 
-		return app('App\Http\Controllers\ColeController')->Ago($UpdatedAgo);
+		return app('App\Http\Controllers\Cole\ColeController')->Ago($UpdatedAgo);
 	}
 
 	public function ColeNew(){

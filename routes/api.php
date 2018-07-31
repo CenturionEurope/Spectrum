@@ -14,7 +14,7 @@ Route::get('/server/check', ['uses' =>'Cole\ColeController@ServerCheck']);
 
 Route::post('/cer/report', ['uses' =>'Cole\ColeController@CustomerExceptionReport']);
 
-Route::post('/me/profilepicture/upload', ['uses' =>'Cole\ColeControllers\MeController@ProfilePictureUpload']);
+Route::post('/me/profilepicture/upload', ['uses' =>'Cole\Cole\Modules\MeController@ProfilePictureUpload']);
 
 Route::get('/notifications/read/{Module?}', ['uses' =>'Cole\ColeController@ReadNotifications']);
 Route::post('/notifications/send/{Module}/{User?}', ['uses' =>'Cole\ColeController@DeliverNotification']);
