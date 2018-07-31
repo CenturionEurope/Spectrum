@@ -14,8 +14,8 @@
                 <img class="Facebook" src="https://graph.facebook.com/{{ $Cole['Data']['Content']['FacebookID'] }}/picture?width=1000&height=1000" />
             @endif
             
-            @if(file_exists('Storage/ProfilePictures/'.$Cole['Data']['Content']['id'].'_ProfilePicture.jpg'))
-                <img class="Facebook" src="/Storage/ProfilePictures/{{ $Cole['Data']['Content']['id'] }}_ProfilePicture.jpg" />
+            @if(file_exists('Cole/Storage/ProfilePictures/'.$Cole['Data']['Content']['id'].'_ProfilePicture.jpg'))
+                <img class="Facebook" src="/Cole/Storage/ProfilePictures/{{ $Cole['Data']['Content']['id'] }}_ProfilePicture.jpg" />
             @endif
             
 

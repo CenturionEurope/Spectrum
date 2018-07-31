@@ -1,6 +1,6 @@
 /node_modules
 /public/hot
-/storage/*.key
+/Cole/Storage/*.key
 /vendor
 /.idea
 /.vagrant
@@ -16,5 +16,5 @@ yarn-error.log
 /resources/views/Widgets/Custom/*.blade.php
 /public/Cole/Javascript/Modules/Custom/*.js
 /public/Cole/LESS/*.cache
-/public/Storage/ProfilePictures/*.jpg
+/public/Cole/Storage/ProfilePictures/*.jpg
 .env_backup

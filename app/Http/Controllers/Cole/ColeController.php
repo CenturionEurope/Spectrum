@@ -540,8 +540,8 @@ class ColeController extends Controller
 		if(!is_dir('Storage')){
 			mkdir('Storage');
 		}
-		if(!is_dir('Storage/ProfilePictures')){
-			mkdir('Storage/ProfilePictures');
+		if(!is_dir('Cole/Storage/ProfilePictures')){
+			mkdir('Cole/Storage/ProfilePictures');
 		}
 		
 	
@@ -553,7 +553,7 @@ class ColeController extends Controller
 	    $img = $img->blur(50);
 	    $img = $img->brightness(-10);
 	    
-		$img->save('Storage/ProfilePictures/'.$Me->id.'_Banner.jpg');
+		$img->save('Cole/Storage/ProfilePictures/'.$Me->id.'_Banner.jpg');
 		
 		return $img->response('jpg');
 		
@@ -990,12 +990,12 @@ class ColeController extends Controller
 		$CurrentPayload = $_ENV['COLE_PAYLOAD'];
 		$ProjectPayload = $CurrentPayload + 1;		
 		if(isset($UpdatePage)){
-			if(!file_exists('Payload/'.$ProjectPayload.'.payload')){
+			if(!file_exists('Cole/Payload/'.$ProjectPayload.'.payload')){
 				header('Location: /');
 				die();
 			}			
 		}else{			
-			if(file_exists('Payload/'.$ProjectPayload.'.payload')){
+			if(file_exists('Cole/Payload/'.$ProjectPayload.'.payload')){
 				// App name not set, navigate
 				header('Location: /update');
 				die();
@@ -1114,7 +1114,7 @@ class ColeController extends Controller
 		$CurrentPayload = $_ENV['COLE_PAYLOAD'];
 		$ProjectPayload = $CurrentPayload + 1;
 		
-		$CatchupsToGo = array_values(array_diff(scandir('Payload/'), array('.', '..','.DS_Store')));
+		$CatchupsToGo = array_values(array_diff(scandir('Cole/Payload/'), array('.', '..','.DS_Store')));
 		natsort($CatchupsToGo);
 		$CatchupsToGo = array_values($CatchupsToGo);
 		$TopPayload = str_replace('.payload','',end($CatchupsToGo));
@@ -1127,8 +1127,8 @@ class ColeController extends Controller
 
 		$CatchupsToGo = count($CatchupsToGo);
 
-		if(file_exists('Payload/'.$ProjectPayload.'.payload')){
-			DB::unprepared(file_get_contents('Payload/'.$ProjectPayload.'.payload'));
+		if(file_exists('Cole/Payload/'.$ProjectPayload.'.payload')){
+			DB::unprepared(file_get_contents('Cole/Payload/'.$ProjectPayload.'.payload'));
 			// Update the Payload counter
 			$env = file_get_contents('../.env');
 			$env = str_replace('COLE_PAYLOAD='.$CurrentPayload, 'COLE_PAYLOAD='.$ProjectPayload, $env);

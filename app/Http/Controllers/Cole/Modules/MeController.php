@@ -76,12 +76,12 @@ class MeController extends Controller
 		    $error = false;
 		    $files = array();
 			
-			if(file_exists('Storage/ProfilePictures/'. $User->id . '_ProfilePicture.jpg')){
-				unlink('Storage/ProfilePictures/'. $User->id . '_ProfilePicture.jpg');
+			if(file_exists('Cole/Storage/ProfilePictures/'. $User->id . '_ProfilePicture.jpg')){
+				unlink('Cole/Storage/ProfilePictures/'. $User->id . '_ProfilePicture.jpg');
 			}
 			
 			if(!isset($_POST['Path'])){
-				$_POST['Path'] = 'Storage/ProfilePictures/';
+				$_POST['Path'] = 'Cole/Storage/ProfilePictures/';
 			}
 		    $uploaddir = $_POST['Path'];
 		    foreach($_FILES as $file)
