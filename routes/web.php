@@ -168,7 +168,7 @@ if (strpos(url()->full(), '://cole.') !== false) {
 			if(isset($_GET['ColeJSON'])){
 				return response()->json($Cole);
 			}else{
-				return View::make($Template)->with('Cole',$Cole);
+				return View::make('Site.'.$Template)->with('Cole',$Cole);
 			}
 		});
 
