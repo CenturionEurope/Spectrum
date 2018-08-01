@@ -12,8 +12,8 @@ yarn-error.log
 *.1
 *.cache
 /app/Http/Controllers/Cole/Modules/Custom/*.php
-/resources/views/Modules/Custom/*.blade.php
-/resources/views/Widgets/Custom/*.blade.php
+/resources/views/Cole/Modules/Custom/*.blade.php
+/resources/views/Cole/Widgets/Custom/*.blade.php
 /public/Cole/Javascript/Modules/Custom/*.js
 /public/Cole/LESS/*.cache
 /public/Cole/Storage/ProfilePictures/*.jpg
