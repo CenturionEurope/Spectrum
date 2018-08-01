@@ -126,11 +126,17 @@ if (strpos(url()->full(), '://cole.') !== false) {
 		->get();
 	}
 	catch (\Exception $e) {
-		abort(401,'Cole was unable to load the pages database table. Please check that you have configured your .env file correctly.');
+		if($_ENV['APP_NAME']!='Laravel'){
+			abort(401,'Cole was unable to load the pages database table. Please check that you have configured your .env file correctly.');
+		}else{
+			$Pages = array();
+		}
 	}
 
 	if(count($Pages)==0){
-		abort(401,'You do not have any pages in your Pages database table. You need at least one to start your Cole website');
+		if($_ENV['APP_NAME']!='Laravel'){
+			abort(401,'You do not have any pages in your Pages database table. You need at least one to start your Cole website');
+		}
 	}
 
 	foreach($Pages as $Page){
