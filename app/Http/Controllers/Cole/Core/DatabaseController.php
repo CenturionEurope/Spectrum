@@ -515,6 +515,12 @@ class DatabaseController extends Controller
 				$table->string('Modules');
 				$table->string('Plugin');
 			});
+			\DB::table('Modules')->insert([
+				'Url' => '/',
+				'Title' => 'My Cole Website',
+				'AccountLocked' => 0,
+				'Template' => 'Index'
+			]);
 			\DB::table('TableViewMapper')->insert([
 				[
 					'Table' => 'ColeMod_Pages',
