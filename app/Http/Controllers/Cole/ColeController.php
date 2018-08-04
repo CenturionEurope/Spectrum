@@ -1180,7 +1180,7 @@ class ColeController extends Controller
 
 		$ch = curl_init();
 
-		curl_setopt($ch, CURLOPT_URL, "https://hooks.slack.com/services/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");
+		curl_setopt($ch, CURLOPT_URL, "https://hooks.slack.com/services/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");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"text\":\"$Exception\"}");
 		curl_setopt($ch, CURLOPT_POST, 1);
