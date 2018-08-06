@@ -10,14 +10,16 @@ function ColeImage($Tag,$Classes=null,$ID=null){
 }
 
 function ColeDebug($v, $asString = false){
-    if (!$asString) {
-        array_map(function ($x) {
-            (new Illuminate\Support\Debug\Dumper)->dump($x);
-        }, [$v]);
-    } else {
-        $r = array_map(function ($x) {
-            return (new App\Library\Classes\Dumper)->dump($x);
-        }, [$v]);
-        return $r[0];
+    if (stristr($_SERVER['SERVER_NAME'], ".local")) {
+        if (!$asString) {
+            array_map(function ($x) {
+                (new Illuminate\Support\Debug\Dumper)->dump($x);
+            }, [$v]);
+        } else {
+            $r = array_map(function ($x) {
+                return (new App\Library\Classes\Dumper)->dump($x);
+            }, [$v]);
+            return $r[0];
+        }
     }
 }
