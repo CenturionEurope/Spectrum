@@ -21,3 +21,4 @@ yarn-error.log
 /resources/views/Site
 /public/Site
 /app/Http/Controllers/Site
+.DS_Store
