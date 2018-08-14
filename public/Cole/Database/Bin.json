@@ -1,0 +1,27 @@
+{
+    "Table" : "Bin",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11,
+          "Null": false
+        },
+        {
+          "Name": "Database",
+          "Type": "varchar",
+          "Length": 100,
+          "Null": true
+        },
+        {
+          "Name": "Object",
+          "Type": "text",
+          "Null": true
+        },
+        {
+          "Name": "DateTime",
+          "Type": "datetime",
+          "Null": true
+        }
+      ]
+  }

@@ -1,0 +1,28 @@
+{
+    "Table" : "ColeMod_Pages_Fields",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10,
+          "Null": false
+        },
+        {
+          "Name": "Url",
+          "Type": "varchar",
+          "Length": 250,
+          "Null": false
+        },
+        {
+          "Name": "Tag",
+          "Type": "varchar",
+          "Length": 100,
+          "Null": false
+        },
+        {
+          "Name": "Value",
+          "Type": "text",
+          "Null": false
+        }
+      ]
+  }

@@ -1,0 +1,11 @@
+{
+    "Table" : "ColeMod_Analytics",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11,
+          "Null": false
+        }
+      ]
+  }

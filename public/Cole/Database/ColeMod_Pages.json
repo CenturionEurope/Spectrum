@@ -1,0 +1,52 @@
+{
+    "Table" : "ColeMod_Pages",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10,
+          "Null": false
+        },
+        {
+          "Name": "Url",
+          "Type": "varchar",
+          "Length": 250,
+          "Null": false
+        },
+        {
+          "Name": "Title",
+          "Type": "text",
+          "Null": false
+        },
+        {
+          "Name": "AccountLocked",
+          "Type": "tinyint",
+          "Null": false,
+          "Default": "0",
+          "Length": 4
+        },
+        {
+            "Name": "Template",
+            "Type": "varchar",
+            "Null": false,
+            "Length": 250
+          },
+          {
+            "Name": "Modules",
+            "Type": "varchar",
+            "Null": false,
+            "Length": 255
+          },
+          {
+            "Name": "Plugin",
+            "Type": "varchar",
+            "Null": false,
+            "Length": 255
+          },
+          {
+            "Name": "Panels",
+            "Type": "text",
+            "Null": true
+          } 
+      ]
+  }

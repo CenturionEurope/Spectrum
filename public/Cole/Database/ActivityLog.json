@@ -1,0 +1,35 @@
+{
+  "Table" : "ActivityLog",
+  "Fields": [
+      {
+        "Name": "id",
+        "Type": "integer",
+        "Length": 10,
+        "Null": false
+      },
+      {
+        "Name": "AccountID",
+        "Type": "integer",
+        "Length": 11,
+        "Null": true
+      },
+      {
+        "Name": "ModuleUpdated",
+        "Type": "varchar",
+        "Length": 255,
+        "Null": true
+      },
+      {
+        "Name": "DataAction",
+        "Type": "varchar",
+        "Length": 255,
+        "Null": true
+      },
+      {
+        "Name": "Time",
+        "Type": "bigint",
+        "Length": 20,
+        "Null": false
+      }
+    ]
+}

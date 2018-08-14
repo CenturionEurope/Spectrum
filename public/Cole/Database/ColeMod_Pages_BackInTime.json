@@ -1,0 +1,27 @@
+{
+    "Table" : "ColeMod_Pages_BackInTime",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11,
+          "Null": false
+        },
+        {
+          "Name": "PageID",
+          "Type": "integer",
+          "Length": 11,
+          "Null": true
+        },
+        {
+          "Name": "DateTime",
+          "Type": "datetime",
+          "Null": true
+        },
+        {
+          "Name": "Object",
+          "Type": "text",
+          "Null": true
+        }
+      ]
+  }
