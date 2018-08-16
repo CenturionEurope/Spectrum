@@ -27,7 +27,7 @@ if (strpos(url()->full(), '://cole.') !== false) {
 				'PageReference' => 'MainUI',
 				'Notifications' => app('App\Http\Controllers\Cole\ColeController')->Notifications(),
 				'NotificationsList' => app('App\Http\Controllers\Cole\ColeController')->NotificationsList(),
-				
+				'Unsplash' => app('App\Http\Controllers\Cole\ColeController')->UnsplashWallpaper()
 			);
 			$View = 'Cole.MainUI';
 		}else{
@@ -82,7 +82,8 @@ if (strpos(url()->full(), '://cole.') !== false) {
 	Route::get('/Cole/Logo', ['uses' =>'Cole\ColeController@ColeBranding']); // construct error message
 	\View::composer('Cole::errors::500', function($view){
 		$Cole = (object)array(
-			'PageReference' => 'error500'
+			'PageReference' => 'error500',
+			'Unsplash' => app('App\Http\Controllers\Cole\ColeController')->UnsplashWallpaper()
 		);
 		$view->with('Cole', $Cole);
 	});

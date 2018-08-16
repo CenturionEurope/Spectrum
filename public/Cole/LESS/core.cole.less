@@ -28,13 +28,25 @@ body{
 			}
 		}
 		.topbar-left{
-			a.logo{
-				padding: 10px 0px;
+			a{
+				width: 50%;
+				text-align: center;
+				display: inline-block;
+				padding: 10px 5px;
+				float: left;
 				img{
 					width: auto!important;
 					height: 50px!important;
 				}
+				&.logo{
+					line-height: 0px;
+					text-align: right;
+				}
+				&.profile{
+					text-align: left;
+				}
 			}
+
 		}
 		&.NightMode{
 			.topbar-left,.side-menu,.side-bar.right-bar{

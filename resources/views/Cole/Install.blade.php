@@ -1,10 +1,6 @@
 @include('Cole.Globals.Header')
 
-<style>
-	body[data-pagereference=install]{
-		background-image: url('{!! $Cole->Unsplash->Url !!}');
-	}
-</style>
+
         <div class="clearfix"></div>
         <div class="Login">
             <div class="col-xs-8"></div>

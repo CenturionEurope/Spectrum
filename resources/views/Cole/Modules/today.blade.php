@@ -39,3 +39,10 @@
 
 </div>
 
+<style>
+	.content-page[data-module=today]{
+		background-image: url('{!! $Cole->Unsplash->Url !!}');
+		background-size: cover;
+		background-position: center;
+	}
+</style>

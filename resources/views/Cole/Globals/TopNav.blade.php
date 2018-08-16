@@ -2,7 +2,12 @@
 <div class="topbar">
     <!-- Logo -->
     <div class="topbar-left">
-        <a href="#" onclick="$('ul.Modules li a[data-module=today]').click();" class="logo"><img src="/Cole/Brand/Cole.png" width="120"/></a>
+        <a href="#" onclick="$('ul.Modules li a[data-module=today]').click();" class="logo">
+            <img src="/Cole/Brand/Cole.png" width="120"/>
+        </a>
+        <a href="#" onclick="$('ul.Modules li a[data-module=me]').click();" class="profile">
+            <img src="https://www.gravatar.com/avatar/{{ md5(strtolower($Cole->User->Email)) }}?s=200" alt="user-img" title="{{ $Cole->User->FullName }}" class="img-circle">                
+        </a> 
     </div>
     <!-- Button mobile view to collapse sidebar menu -->
     <div class="navbar navbar-default" role="navigation">

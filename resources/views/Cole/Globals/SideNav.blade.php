@@ -1,15 +1,5 @@
 <div class="left side-menu">
     <div class="sidebar-inner slimscrollleft">
-        <!-- User -->
-        <div class="user-box">
-            <div class="user-img">
-                <a href="#" onclick="$('ul.Modules li a[data-module=me]').click();">
-                    <img src="/ColeAccounts/AccountProfilePicture" alt="user-img" title="{{ $Cole->User->FullName }}" class="img-circle img-thumbnail img-responsive">
-                </a>            
-            </div>
-            <h5><a href="#" onclick="$('ul.Modules li a[data-module=me]').click();">{{ $Cole->User->FullName }}</a> </h5>            
-        </div>
-        <!-- /User -->
         <!--- Modules -->
         <div id="sidebar-menu">
             <ul class="Modules">

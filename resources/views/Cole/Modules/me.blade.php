@@ -1,5 +1,5 @@
 		<div class="AccountHero" style="background-image: url('/Cole/Me/Banner');">
-			<img src="/ColeAccounts/AccountProfilePicture" />
+			<img src="https://www.gravatar.com/avatar/{{ md5(strtolower($Cole->User->Email)) }}?s=200" />
 			<h1>{{ $Cole->User->FullName }}</h1>
 		</div>
 
@@ -18,7 +18,7 @@
 
 	                                @foreach($Cole->Module->ModuleContent->Plugin->ActivityLogPlugin->ActivityLog as $LogItem)
                                     <div class="comment">
-                                        <img src="/ColeAccounts/AccountProfilePicture?AccountID={{ $LogItem->AccountData->id }}" alt="" class="comment-avatar">
+                                        <img src="https://www.gravatar.com/avatar/{{ md5(strtolower($LogItem->AccountData->Email)) }}?s=200" alt="" class="comment-avatar">
                                         <div class="comment-body">
                                             <div class="comment-text">
                                                 <div class="comment-header">

@@ -60,5 +60,13 @@
                         </div>
 
 
-                    </div> <!-- container -->
+					</div> <!-- container -->
+					
+<style>
+		.content-page[data-module=error]{
+			background-image: url('{!! $Cole->Unsplash->Url !!}');
+			background-size: cover;
+			background-position: center;
+		}
+	</style>
 @endif

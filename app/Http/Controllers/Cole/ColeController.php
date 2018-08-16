@@ -294,6 +294,8 @@ class ColeController extends Controller
 			}
 			
 			$Cole->Module->Widgets = $Widgets;
+
+			$Cole->Unsplash = app('App\Http\Controllers\Cole\ColeController')->UnsplashWallpaper();
 		}
 		
 		if($ModuleData->Custom==1){
@@ -324,7 +326,7 @@ class ColeController extends Controller
 		if(!isset($ModuleData->EditView)){
 			$View = 'Cole/Prebuilt/EditPane';
 		}else{
-			$View = $ModuleData->EditView;
+			$View = 'Cole/'.$ModuleData->EditView;
 		}
 
 	
