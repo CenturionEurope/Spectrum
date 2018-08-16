@@ -36,5 +36,62 @@
             "Length": 255,
             "Null": true
           }            
-      ]
+    ],
+    "Content": [
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 1,
+          "Title": "Server Storage",
+          "Controller": "App\\Http\\Controllers\\WidgetsController",
+          "Function": "Storage",
+          "Blade": "Widgets.Storage"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 2,
+          "Title": "Visitors",
+          "Controller": "App\\Http\\Controllers\\WidgetsController",
+          "Function": "Visitors",
+          "Blade": "Widgets.Visitors"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 3,
+          "Title": "This week",
+          "Controller": "App\\Http\\Controllers\\WidgetsController",
+          "Function": "ThisWeek",
+          "Blade": "Widgets.ThisWeek"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 4,
+          "Title": "Last Updated",
+          "Controller": "App\\Http\\Controllers\\WidgetsController",
+          "Function": "ThisWeek",
+          "Blade": "Widgets.ThisWeek"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 5,
+          "Title": "New from Cole",
+          "Controller": "App\\Http\\Controllers\\WidgetsController",
+          "Function": "ColeNew",
+          "Blade": "Widgets.ColeNew"
+        }
+      }
+    ]
   }
