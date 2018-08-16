@@ -2,7 +2,7 @@
 <div class="topbar">
     <!-- Logo -->
     <div class="topbar-left">
-        <a href="#" onclick="$('ul.Modules li a[data-module=today]').click();" class="logo"><img src="/Cole/Brand/coleTransparent.png" width="120"/></a>
+        <a href="#" onclick="$('ul.Modules li a[data-module=today]').click();" class="logo"><img src="/Cole/Brand/Cole.png" width="120"/></a>
     </div>
     <!-- Button mobile view to collapse sidebar menu -->
     <div class="navbar navbar-default" role="navigation">

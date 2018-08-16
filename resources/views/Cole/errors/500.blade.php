@@ -53,24 +53,7 @@
 
 
 		                            </div>
-		                            @php
-			                            $Images = scandir('Cole/Images/Heros');
-			                            foreach($Images as $key => $one) {
-										    if(strpos($one, '.jpg') === false)
-										        unset($Images[$key]);
-										}
-										$Images = array_values($Images);
-										$Image = $Images[rand(0,count($Images)-1)];
-										
-										
-		                            @endphp
-		                            <style>
-			                        	body .content-page[data-module=error]{
-				                        	background-image: url('/Cole/Images/Heros/{{ $Image }}');
-				                        	background-size: cover;
-			                        	}
-			                        	
-			                        </style>
+		                            
 	                            </div>
                             </div>
                             

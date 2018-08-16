@@ -1,4 +1,4 @@
-<p align="center"><img src="http://poweredbycole.co.uk/Cole/Brand/coleTransparent.png" width="40%"></p>
+<p align="center"><img src="http://poweredbycole.co.uk/Cole/Brand/Cole.png" width="40%"></p>
 <p align="center"><a href="https://travis-ci.org/genericmilk/Cole" target="_blank"><img src="https://travis-ci.org/genericmilk/Cole.svg?branch=master" /></a></p>
 
 Cole is a CMS Developed by Senior LAMP Developer, Peter Day.

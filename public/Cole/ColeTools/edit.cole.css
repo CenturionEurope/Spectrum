@@ -22,7 +22,7 @@ body:not(.ColeEdit){
 	left: 0px;
 	width: 100%;
 	height: 50px;
-	background-color: #253138;
+	background-color: #12102e;
 	z-index: 999999;
 }
 
@@ -189,7 +189,7 @@ body:not(.ColeEdit){
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     background: none;
     border: 0;
-    background-color: #2f3e47;
+    background-color: #12102e;
     color: #98a6ad;
     font-size: 15px;
     width: 50px;
@@ -216,8 +216,8 @@ body:not(.ColeEdit){
 }
 
 .ColeToolkit .ControlsContainer button.active{
-	color:#ff6c00!important;
-	border-top:3px solid #ff6c00!important;
+	color:#be2727!important;
+	border-top:3px solid #be2727!important;
 }
 
 .ColeToolkit ul.ModeSwitcher{
@@ -236,7 +236,7 @@ body:not(.ColeEdit){
 }
 
 .ColeToolkit ul.ModeSwitcher li.active{
-	background-color: #ff6c00;
+	background-color: #be2727;
 }
 
 form#ColeUpload{
@@ -244,7 +244,7 @@ form#ColeUpload{
 }
 .Cole:not(.Panels),.Cole_BackgroundImage{
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    border:2px solid #ff6c00!important;
+    border:2px solid #be2727!important;
     -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
@@ -265,7 +265,7 @@ form#ColeUpload{
 	position: fixed;
 	top: 0px;
 	left:0px;
-	background-color: #253138;
+	background-color: #12102e;
 	display: none;
 	width: 250px;
 	height: 100%;
@@ -275,7 +275,7 @@ form#ColeUpload{
 .ColeImage.Files{
 	position: fixed;
 	top: 0px;
-	background-color: #253138;
+	background-color: #12102e;
 	display: none;
 	height: 100%;
 	z-index: 9999999999;
@@ -305,7 +305,7 @@ form#ColeUpload{
 	padding: 10px 20px;
 	display: block;
 	color: white!important;
-	background-color: #2f3e47;
+	background-color: #12102e;
     margin: 10px 0px;
     cursor: pointer;
 }
@@ -439,8 +439,8 @@ form#ColeUpload{
     text-align: center;
     padding: 20px;
     background-color: white;
-    color: #ff6c00;
-    border: 3px dashed #ff6c00;
+    color: #be2727;
+    border: 3px dashed #be2727;
     cursor: pointer;
     margin-top: 20px;
 }

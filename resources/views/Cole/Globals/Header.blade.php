@@ -6,7 +6,7 @@
         <meta name="description" content="Cole is a CMS Developed by Peter Day that allows quick and pain free management of your website.">
         <meta name="author" content="Peter Day">
 		<meta name="csrf-token" content="{!! csrf_token() !!}"/> 
-        <link rel="shortcut icon" href="/Cole/Brand/coleIcon.png" />
+        <link rel="shortcut icon" href="/Cole/Brand/Cole.png" />
         <title>Cole</title>
         <link href="/Cole/Javascript/Plugins/RichText/ui/trumbowyg.min.css" rel="stylesheet" media="screen">
         @isset($Cole->PageReference)

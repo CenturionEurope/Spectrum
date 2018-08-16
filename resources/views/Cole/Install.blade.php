@@ -1,21 +1,10 @@
 @include('Cole.Globals.Header')
 
-@php
-	$Images = scandir('Cole/Images/Heros');
-	foreach($Images as $key => $one) {
-	    if(strpos($one, '.jpg') === false)
-	        unset($Images[$key]);
-	}
-	$Images = array_values($Images);
-	$Image = $Images[rand(0,count($Images)-1)];
-
-@endphp
 <style>
 	body[data-pagereference=install]{
-		background-image: url('/Cole/Images/Heros/{{ $Image }}');
+		background-image: url('{!! $Cole->Unsplash->Url !!}');
 	}
-
-	</style>
+</style>
         <div class="clearfix"></div>
         <div class="Login">
             <div class="col-xs-8"></div>
@@ -24,9 +13,7 @@
                     <div class="form-horizontal m-t-20">
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <video width="240" autoplay="true" muted>
-                                    <source src="/Cole/Brand/ColeWelcomeSpin.m4v" type="video/mp4" />
-                                </video>
+                                <img class="Logo" src="/Cole/Brand/Cole.png" />
                             </div>
                         </div>  
 
@@ -42,6 +29,10 @@
                             <div class="form-group text-center">
                                 <div class="col-xs-12">
                                     <button class="btn btn-custom btn-block waves-effect waves-light Next" type="button" data-topage="2">Next</button>
+                                    @isset($Cole->Unsplash->Author)
+                                    
+                                        <p class="text-muted"><br/>Wallpaper by {{$Cole->Unsplash->Author}} on Unsplash</p>
+                                    @endisset
                                 </div>
                             </div>
                         </div>

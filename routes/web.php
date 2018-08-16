@@ -33,7 +33,8 @@ if (strpos(url()->full(), '://cole.') !== false) {
 		}else{
 			$Cole = (object)array(
 				'Settings' => app('App\Http\Controllers\Cole\ColeController')->Settings(),
-				'PageReference' => 'Login'
+				'PageReference' => 'Login',
+				'Unsplash' => app('App\Http\Controllers\Cole\ColeController')->UnsplashWallpaper()
 			);
 			$View = 'Cole.Login';		
 		}
@@ -61,7 +62,8 @@ if (strpos(url()->full(), '://cole.') !== false) {
 	Route::get('/install', function () {	
 		app('App\Http\Controllers\Cole\ColeController')->InstallCheck(true); // Check Cole is installed	
 		$Cole = (object)array(
-			'PageReference' => 'install'
+			'PageReference' => 'install',
+			'Unsplash' => app('App\Http\Controllers\Cole\ColeController')->UnsplashWallpaper()
 		);
 		return View::make('Cole.Install')->with('Cole', $Cole);
 	});

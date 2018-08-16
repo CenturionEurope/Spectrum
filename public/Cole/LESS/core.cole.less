@@ -27,9 +27,18 @@ body{
 				color: #435966;
 			}
 		}
+		.topbar-left{
+			a.logo{
+				padding: 10px 0px;
+				img{
+					width: auto!important;
+					height: 50px!important;
+				}
+			}
+		}
 		&.NightMode{
 			.topbar-left,.side-menu,.side-bar.right-bar{
-				background: #253138!important;
+				background: #12102e!important;
 			}
 			.NoNotifications{
 				i,span{
@@ -45,7 +54,11 @@ body{
 						a{
 							color: #98a6ad;	
 							&:hover{
-								color: @cole_accent;
+								color: white;
+							}
+							&.active{
+								color: white!important;
+								border-color: white!important;
 							}
 						}
 					}

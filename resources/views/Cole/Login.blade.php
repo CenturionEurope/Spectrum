@@ -1,21 +1,10 @@
 @include('Cole.Globals.Header')
 
-@php
-	$Images = scandir('Cole/Images/Heros');
-	foreach($Images as $key => $one) {
-	    if(strpos($one, '.jpg') === false)
-	        unset($Images[$key]);
-	}
-	$Images = array_values($Images);
-	$Image = $Images[rand(0,count($Images)-1)];
-
-@endphp
 <style>
 	body[data-pagereference=Login]{
-		background-image: url('/Cole/Images/Heros/{{ $Image }}');
+		background-image: url('{!! $Cole->Unsplash->Url !!}');
 	}
-
-	</style>
+</style>
         <div class="clearfix"></div>
         <div class="Login">
             <div class="col-xs-8"></div>
@@ -24,9 +13,7 @@
                     <div class="form-horizontal m-t-20">
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <video width="240" autoplay="true" muted>
-                                    <source src="/Cole/Brand/ColeWelcomeSpin.m4v" type="video/mp4" />
-                                </video>
+                                <img class="Logo" src="/Cole/Brand/Cole.png" />
                             </div>
                         </div>       
 						<div class="form-group">
@@ -47,6 +34,9 @@
                         <div class="row">
                             <div class="col-sm-12 text-center m-t-30">
                                 <p class="text-muted icons"><a href="https://github.com/genericmilk/Cole" target="_blank"><b><i class="zmdi zmdi-github-alt"></i></b></a></p>
+                                @isset($Cole->Unsplash->Author)
+                                    <p class="text-muted">Wallpaper by {{$Cole->Unsplash->Author}} on Unsplash</p>
+                                @endisset
                                 <p class="text-muted">&copy; Cole {{ date('Y') }} - Version {{ $Cole->Settings->SystemVersion }}</p>
                             </div>
                         </div>                   

@@ -1416,6 +1416,47 @@ class ColeController extends Controller
 		return $Notifications;
 	}
 
+
+	public function UnsplashWallpaper(){
+
+		if (Cache::has('Unsplash')){
+			$Unsplash = Cache::get('Unsplash');
+		} else {
+
+			$curl = curl_init();
+
+			curl_setopt_array($curl, array(
+			CURLOPT_URL => "https://api.unsplash.com/photos/random?client_id=d11611dfac67aa69d380fc5c93451786ef0b879bf742000abeb63a58c28ea5b3",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "GET",
+			CURLOPT_HTTPHEADER => array(
+				"cache-control: no-cache",
+				"postman-token: 975a8663-3cbf-887d-84b7-c624069e7f80"
+			),
+			));
+	
+			$response = json_decode(curl_exec($curl));
+			$err = curl_error($curl);
+	
+			curl_close($curl);
+	
+			if(isset($response->urls)){
+				$Unsplash = (object)array(
+					'Url' => $response->urls->full,
+					'Author' => $response->user->name
+				);
+				Cache::put('Unsplash', $Unsplash, 2);
+			}
+		}
+
+		return $Unsplash;
+
+	}
+
 	
 	
 

@@ -23,7 +23,7 @@ File: Core
    Common
 ============= */
 body {
-  background: #253138;
+  background: #12102e;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding-bottom: 60px;
@@ -33,7 +33,7 @@ body {
 html {
   position: relative;
   min-height: 100%;
-  background: #253138;
+  background: #12102e;
 }
 h1,
 h2,
@@ -348,7 +348,7 @@ hr {
   -moz-border-radius: 5px;
   background-clip: padding-box;
   margin-bottom: 20px;
-  background-color: #2f3e47;
+  background-color: #12102e;
 }
 .card-box .card-drop {
   color: #98a6ad;
@@ -527,10 +527,10 @@ blockquote small {
 }
 /* Background colors */
 .bg-custom {
-  background-color: #ff6c00 !important;
+  background-color: #be2727 !important;
 }
 .bg-primary {
-  background-color: #ff6c00 !important;
+  background-color: #be2727 !important;
 }
 .bg-success {
   background-color: #10c469 !important;
@@ -564,7 +564,7 @@ blockquote small {
 }
 /* Text colors */
 .text-custom {
-  color: #ff6c00 !important;
+  color: #be2727 !important;
 }
 .text-white {
   color: #ffffff !important;
@@ -576,7 +576,7 @@ blockquote small {
   color: #98a6ad !important;
 }
 .text-primary {
-  color: #ff6c00 !important;
+  color: #be2727 !important;
 }
 .text-warning {
   color: #f9c851 !important;
@@ -737,10 +737,10 @@ input.form-control:-ms-input-placeholder {
   padding: .3em .6em .3em;
 }
 .label-default {
-  background-color: #ff6c00;
+  background-color: #be2727;
 }
 .label-primary {
-  background-color: #ff6c00;
+  background-color: #be2727;
 }
 .label-success {
   background-color: #10c469;
@@ -770,7 +770,7 @@ input.form-control:-ms-input-placeholder {
   padding: 3px 5px;
   font-size: 12px;
   margin-top: 1px;
-  background-color: #ff6c00;
+  background-color: #be2727;
 }
 .badge-xs {
   font-size: 9px;
@@ -783,7 +783,7 @@ input.form-control:-ms-input-placeholder {
   transform: translate(0, -2px);
 }
 .badge-primary {
-  background-color: #ff6c00;
+  background-color: #be2727;
 }
 .badge-success {
   background-color: #10c469;
@@ -851,8 +851,8 @@ input.form-control:-ms-input-placeholder {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #ff6c00;
-  border-color: #ff6c00;
+  background-color: #be2727;
+  border-color: #be2727;
 }
 .pager li > a,
 .pager li > span {
@@ -934,8 +934,8 @@ input.form-control:-ms-input-placeholder {
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  background-color: #ff6c00 !important;
-  border-color: #ff6c00;
+  background-color: #be2727 !important;
+  border-color: #be2727;
 }
 .list-group-item.disabled .list-group-item-text,
 .list-group-item.disabled:focus .list-group-item-text,
@@ -991,7 +991,7 @@ button.list-group-item .list-group-item-heading {
 .modal .modal-dialog .modal-content {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  border-color: #2f3e47;
+  border-color: #12102e;
   border-radius: 2px;
   box-shadow: none;
   padding: 30px;
@@ -1050,7 +1050,7 @@ button.list-group-item .list-group-item-heading {
   padding: 15px 25px 15px 25px;
   line-height: 22px;
   font-size: 18px;
-  background-color: #ff6c00;
+  background-color: #be2727;
   color: #ffffff;
   text-align: left;
   margin: 0px;
@@ -1078,11 +1078,11 @@ button.list-group-item .list-group-item-heading {
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  background-color: #ff6c00;
-  border-color: #ff6c00;
+  background-color: #be2727;
+  border-color: #be2727;
 }
 .nav-pills > .active > a > .badge {
-  color: #ff6c00;
+  color: #be2727;
 }
 /* Tooltips */
 .tooltip-inner {
@@ -1109,7 +1109,7 @@ button.list-group-item .list-group-item-heading {
 .popover .popover-title {
   background-color: #394c57;
   border-bottom: none;
-  color: #ff6c00;
+  color: #be2727;
   font-weight: 600;
 }
 .popover.top > .arrow:after {
