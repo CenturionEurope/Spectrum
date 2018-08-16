@@ -497,16 +497,8 @@ class ColeController extends Controller
 		}else{
 			$User = (object)$this->AccountDetails();		
 		}
-		if(isset($User->ProfilePicture)){
-			// Internal profile picture
-			$ImageURL = $User->ProfilePicture;
-		}elseif($User->FacebookID!=0){
-			// Facebook Profile Picture
-			$ImageURL = 'https://graph.facebook.com/'.$User->FacebookID.'/picture?width=1000&height=1000';
-		}else{
-			// No profile picture found, output default
-			$ImageURL = 'Cole/UI/images/UserDefault.jpg';
-		}
+
+		$ImageURL = 'https://www.gravatar.com/avatar/'.md5(strtolower($User->Email)).'?s=200';
 			
 		if(!isset($ReturnURL)){
 		

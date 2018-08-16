@@ -48,7 +48,7 @@ File: Menu
   display: none;
 }
 .logo span span {
-  color: #10c469;
+  color: #9EF718;
 }
 .user-box {
   text-align: center;
@@ -74,13 +74,13 @@ File: Menu
   font-size: 15px;
 }
 .user-box .user-status.away i {
-  color: #f9c851;
+  color: #FFC61E;
 }
 .user-box .user-status.offline i {
-  color: #ff5b5b;
+  color: #be2727;
 }
 .user-box .user-status.online i {
-  color: #10c469;
+  color: #9EF718;
 }
 .user-box .user-status.busy i {
   color: #98a6ad;
@@ -107,17 +107,17 @@ File: Menu
 .notification-box .pulse {
   width: 2px;
   height: 2px;
-  border: 3px solid #ff5b5b;
+  border: 3px solid #be2727;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  background-color: #ff5b5b;
+  background-color: #be2727;
   z-index: 10;
   position: absolute;
   right: 3px;
 }
 .notification-box .dot {
-  border: 4px solid #ff5b5b;
+  border: 4px solid #be2727;
   background: transparent;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;

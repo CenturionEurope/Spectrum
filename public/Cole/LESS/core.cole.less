@@ -191,6 +191,52 @@ body{
 			border-color: white!important;
 		}
 	}
+
+	// New button design
+	.btn{
+		&.btn-success{
+			background-color: transparent!important;
+			border: 3px solid @cole_green;
+			color: @cole_green!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_green;
+			}
+		}
+		&.btn-warning{
+			background-color: transparent!important;
+			border: 3px solid @cole_yellow;
+			color: @cole_yellow!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_yellow;
+			}
+		}
+		&.btn-danger{
+			background-color: transparent!important;
+			border: 3px solid @cole_accent;
+			color: @cole_accent!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_accent;
+			}
+		}
+		&.btn-info{
+			background-color: transparent!important;
+			border: 3px solid @cole_blue;
+			color: @cole_blue!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_blue;
+			}
+		}
+		
+	}
+
 	.LoadingElement{
 		background-color: @cole_widget_bkgd;
 		width: 80px;
@@ -239,12 +285,12 @@ body{
 		span.MaxLength{
 			float: right;
 			font-weight: bold;
-			color: #10c469;
+			color: @cole_green;
 			&.warning{
-				color: #f9c851;
+				color: @cole_yellow;
 			}
 			&.danger{
-				color: #ff5b5b;
+				color: @cole_accent;
 			}
 		}
 		img.ColeConstructThumbnailEdit{

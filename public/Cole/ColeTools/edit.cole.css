@@ -383,7 +383,7 @@ form#ColeUpload{
 	right: 0px;
 	width: 100px;
 	display: block;
-	background-color: #10c469;
+	background-color: #9EF718;
 	font-weight: bold;
 	cursor: pointer;
 	z-index: 99999999;
@@ -401,20 +401,20 @@ form#ColeUpload{
 .ColeTool.Saving{
 	cursor: auto;
 	pointer-events: none;
-	background-color: #f9c851;
+	background-color: #FFC61E;
 }
 
 
 .ColeTool.Bad{
 	cursor: auto;
 	pointer-events: none;
-	background-color: #ff5b5b;
+	background-color: #be2727;
 }
 
 .ColeTool.Good{
 	cursor: auto;
 	pointer-events: none;
-	background-color: #10c469;
+	background-color: #9EF718;
 }
 
 
@@ -452,7 +452,7 @@ form#ColeUpload{
     position: absolute;
     top:0px;
     right: 0px;
-    background-color: #ff5b5b;
+    background-color: #be2727;
     color: white;
     padding: 10px 15px;
     text-align: center;
