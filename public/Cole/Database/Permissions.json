@@ -1,0 +1,51 @@
+{
+    "Table" : "Permissions",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10,
+          "Null": false
+        },
+        {
+          "Name": "User",
+          "Type": "integer",
+          "Length": 11,
+          "Null": false
+        },
+        {
+          "Name": "Module",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": true
+        },
+        {
+          "Name": "Get",
+          "Type": "tinyint",
+          "Null": false,
+          "Default": "0",
+          "Length": 4
+        },
+        {
+            "Name": "Create",
+            "Type": "tinyint",
+            "Null": false,
+            "Default": "0",
+            "Length": 4
+          },
+          {
+            "Name": "Save",
+            "Type": "tinyint",
+            "Null": false,
+            "Default": "0",
+            "Length": 4
+          },
+          {
+            "Name": "Delete",
+            "Type": "tinyint",
+            "Null": false,
+            "Default": "0",
+            "Length": 4
+          }
+      ]
+  }

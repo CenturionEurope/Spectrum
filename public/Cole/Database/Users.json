@@ -1,0 +1,53 @@
+{
+    "Table" : "Users",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10
+        },
+        {
+          "Name": "FullName",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": true
+        },
+        {
+            "Name": "Email",
+            "Type": "varchar",
+            "Length": 255
+        },
+        {
+          "Name": "Password",
+          "Type": "text"
+        },
+        {
+            "Name": "Secret",
+            "Type": "bigint",
+            "Null": true,
+            "Length": 20
+          },
+          {
+            "Name": "NightMode",
+            "Type": "tinyint",
+            "Default": "0",
+            "Length": 4
+          },
+          {
+            "Name": "Token",
+            "Type": "varchar",
+            "Length": 250,
+            "Null": true
+          },
+          {
+            "Name": "PermissionsLocked",
+            "Type": "integer",
+            "Length": 11
+          },
+          {
+            "Name": "Google2FASK",
+            "Type": "varchar",
+            "Length": 250
+          }                  
+      ]
+  }

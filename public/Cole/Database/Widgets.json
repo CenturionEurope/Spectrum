@@ -1,0 +1,40 @@
+{
+    "Table" : "Widgets",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10
+        },
+        {
+          "Name": "Title",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": true
+        },
+        {
+            "Name": "Title",
+            "Type": "varchar",
+            "Length": 255,
+            "Null": true
+          },
+          {
+            "Name": "Controller",
+            "Type": "varchar",
+            "Length": 255,
+            "Null": true
+          },
+          {
+            "Name": "Function",
+            "Type": "varchar",
+            "Length": 255,
+            "Null": true
+          },
+          {
+            "Name": "Blade",
+            "Type": "varchar",
+            "Length": 255,
+            "Null": true
+          }            
+      ]
+  }

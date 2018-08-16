@@ -1,0 +1,133 @@
+{
+    "Table" : "TableViewMapper",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10
+        },
+        {
+            "Name": "Table",
+            "Type": "varchar",
+            "Length": 100
+          },
+          {
+            "Name": "ColName",
+            "Type": "varchar",
+            "Length": 100
+          },
+          {
+            "Name": "EnglishName",
+            "Type": "varchar",
+            "Length": 250
+          },
+          {
+            "Name": "Show",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 1
+          },
+          {
+            "Name": "Edit",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 1
+          },
+          {
+            "Name": "IsBoolean",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "Currency",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "SaltedMD5",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "B64",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "isArray",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "ArrayDecoderPlugin",
+            "Type": "varchar",
+            "Length": 100,
+            "Null": true
+          },
+          {
+            "Name": "isFlag",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },          
+          {
+            "Name": "FlagDecoderPlugin",
+            "Type": "varchar",
+            "Length": 100,
+            "Null": true
+          },
+          {
+            "Name": "isDate",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "isRTF",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "isImg",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "isThumb",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "MaxLength",
+            "Type": "integer",
+            "Length": 11,
+            "Null": true
+          },
+          {
+            "Name": "isFile",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "isURL",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "isTemplatePicker",
+            "Type": "integer",
+            "Length": 11,
+            "Default": 0
+          }
+      ]
+  }

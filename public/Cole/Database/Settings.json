@@ -1,0 +1,36 @@
+{
+    "Table" : "Settings",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10
+        },
+        {
+          "Name": "settingEnglishName",
+          "Type": "varchar",
+          "Length": 255
+        },
+        {
+            "Name": "settingCodeName",
+            "Type": "varchar",
+            "Length": 255
+        },
+        {
+          "Name": "settingValue",
+          "Type": "text"
+        },
+        {
+            "Name": "settingB64",
+            "Type": "tinyint",
+            "Default": "0",
+            "Length": 4
+          },
+          {
+            "Name": "Locked",
+            "Type": "tinyint",
+            "Default": "0",
+            "Length": 4
+          }
+      ]
+  }
