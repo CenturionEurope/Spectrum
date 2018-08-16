@@ -54,5 +54,120 @@
         "Length": 100,
         "Null": true
         }                
-      ]
+    ],
+    "Content": [
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 1,
+          "ModuleName": "Today",
+          "Codename": "today",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\TodayController",
+          "Database": null,
+          "Template": "today",
+          "Icon": null,
+          "EditView": null
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 2,
+          "ModuleName": "Me",
+          "Codename": "me",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\MeController",
+          "Database": "Users",
+          "Template": "me",
+          "Icon": "zmdi-face",
+          "EditView": null
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 3,
+          "ModuleName": "Pages",
+          "Codename": "pages",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\PagesController",
+          "Database": "ColeMod_Pages",
+          "Template": "pages",
+          "Icon": "zmdi-edit",
+          "Custom": 0
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 4,
+          "ModuleName": "Settings",
+          "Codename": "settings",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\SettingsController",
+          "Database": "Settings",
+          "Template": "settings",
+          "Icon": "zmdi-settings",
+          "Custom": 0
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 5,
+          "ModuleName": "Images",
+          "Codename": "images",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\ImagesController",
+          "Database": "ColeMod_Pages_Images",
+          "Template": "images",
+          "Icon": "zmdi-image",
+          "Custom": 0
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 6,
+          "ModuleName": "Analytics",
+          "Codename": "analytics",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\AnalyticsController",
+          "Database": "ColeMod_Analytics",
+          "Template": "analytics",
+          "Icon": "zmdi-chart",
+          "Custom": 0
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 7,
+          "ModuleName": "Help",
+          "Codename": "help",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\HelpController",
+          "Database": "Help",
+          "Template": "help",
+          "Icon": "zmdi-help",
+          "Custom": 0
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 8,
+          "ModuleName": "Stories",
+          "Codename": "stories",
+          "Controller": "App\\Http\\Controllers\\Cole\\Modules\\StoriesController",
+          "Database": "ColeMod_Stories",
+          "Template": "stories",
+          "Icon": "zmdi-book",
+          "Custom": 0,
+          "EditView": "Prebuilt/Story"
+        }
+      }      
+    ]
   }

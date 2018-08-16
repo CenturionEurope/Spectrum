@@ -37,5 +37,40 @@
             "Length": 100,
             "Null": true
           }
-      ]
+    ],
+    "Content": [
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "Category": 1,
+          "Title": "User Accounts",
+          "Score": 1,
+          "Template": "Help/Basics/Accounts",
+          "Icon": "zmdi-accounts-alt"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "Category": 2,
+          "Title": "Setting Up Analytics",
+          "Score": 3,
+          "Template": "Help/Admin/Analytics",
+          "Icon": "zmdi-chart"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "Category": 2,
+          "Title": "Locking a User's Permissions",
+          "Score": 2,
+          "Template": "Help/Admin/LockPermissions",
+          "Icon": "zmdi-lock"
+        }
+      }
+    ]
   }

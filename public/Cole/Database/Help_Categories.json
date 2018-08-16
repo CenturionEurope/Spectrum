@@ -12,5 +12,23 @@
           "Length": 100,
           "Null": true
         }
-      ]
+    ],
+    "Content": [
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 1,
+          "Title": "Cole Basics"
+        }
+      },
+      {
+        "Persist": true,
+        "Install": true,
+        "Data": {
+          "id": 2,
+          "Title": "Administration"
+        }
+      }
+    ]
   }

@@ -48,5 +48,21 @@
             "Type": "text",
             "Null": true
           } 
-      ]
+    ],
+    "Content": [
+      {
+        "Persist": false,
+        "Install": true,
+        "Data": {
+          "Url": "/",
+          "Title": "My Cole Website",
+          "AccountLocked": 0,
+          "AccountLocked": 0,
+          "Template": "Index",
+          "Modules": "",
+          "Plugin": "",
+          "Panels": null
+        }
+      }
+    ]
   }
