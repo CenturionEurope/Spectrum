@@ -182,7 +182,7 @@
         ?>
 
 
-        	<td data-itemid="<?php echo $DataPackage->id; ?>" data-module="<?php echo $Cole->Module->ModuleData->Codename; ?>" style="width:100px;">
+        	<td data-itemid="<?php echo $DataPackage->id; ?>" data-module="<?php echo $Cole->Module->ModuleData->Codename; ?>" style="width:120px;">
 
     			    @if($Cole->Module->ModuleData->Codename=="pages")
     					<div class="btn btn-warning btn-xs ColeModuleTrigger" data-control="pagemanage" onclick="window.open('{{ $Cole->Settings->SiteURL }}/<?php if($PageURL!='/'){ echo $PageURL; } ?>?ColeEdit={{ $Cole->User->Secret }}&Affector={{ $Cole->User->id }}');">

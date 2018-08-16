@@ -1,0 +1,40 @@
+{
+    "Table" : "Notifications",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11
+        },
+        {
+          "Name": "User",
+          "Type": "integer",
+          "Length": 11,
+          "Null": true
+        },
+        {
+          "Name": "Module",
+          "Type": "varchar",
+          "Null": true,
+          "Length": 100
+        },
+        {
+            "Name": "Notification",
+            "Type": "varchar",
+            "Null": true,
+            "Length": 250
+          },
+          {
+            "Name": "Read",
+            "Type": "integer",
+            "Null": false,
+            "Length": 11,
+            "Default": 0
+          },
+          {
+            "Name": "Date",
+            "Type": "datetime",
+            "Null": true
+          }
+      ]
+  }

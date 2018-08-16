@@ -1,0 +1,51 @@
+{
+    "Table" : "ColeMod_Pages_Images",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10,
+          "Null": false
+        },
+        {
+          "Name": "Tag",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": false
+        },
+        {
+          "Name": "Value",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": true
+        },
+        {
+          "Name": "Width",
+          "Type": "integer",
+          "Null": true,
+          "Length": 11
+        },
+        {
+            "Name": "Height",
+            "Type": "integer",
+            "Null": true,
+            "Length": 11
+          },
+          {
+            "Name": "Alt",
+            "Type": "text",
+            "Null": true
+          },
+          {
+            "Name": "Plugin",
+            "Type": "varchar",
+            "Null": false,
+            "Length": 255
+          },
+          {
+            "Name": "Tweaks",
+            "Type": "text",
+            "Null": true
+          } 
+      ]
+  }

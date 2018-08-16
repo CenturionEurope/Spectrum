@@ -1,0 +1,22 @@
+{
+    "Table" : "ColeMod_Pages_Panels",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11
+        },
+        {
+          "Name": "Name",
+          "Type": "varchar",
+          "Length": 250,
+          "Null": true
+        },
+        {
+          "Name": "Blade",
+          "Type": "varchar",
+          "Length": 250,
+          "Null": true
+        }
+      ]
+  }

@@ -1,0 +1,58 @@
+{
+    "Table" : "Modules",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 10
+        },
+        {
+          "Name": "ModuleName",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": true
+        },
+        {
+          "Name": "Codename",
+          "Type": "varchar",
+          "Length": 255,
+          "Null": true
+        },
+        {
+        "Name": "Controller",
+        "Type": "text",
+        "Null": true
+        },
+        {
+        "Name": "Database",
+        "Type": "varchar",
+        "Length": 255,
+        "Null": true
+        },
+        {
+        "Name": "Template",
+        "Type": "varchar",
+        "Length": 255,
+        "Null": true
+        },
+        {
+        "Name": "Icon",
+        "Type": "varchar",
+        "Length": 255,
+        "Null": true
+        },
+        {
+        "Name": "Custom",
+        "Type": "tinyint",
+        "Length": 4,
+        "Null": false,
+        "Default": 0
+        },
+        {
+        "Name": "EditView",
+        "Type": "varchar",
+        "Length": 100,
+        "Null": true
+        }                
+      ]
+  }

@@ -15,6 +15,62 @@ body{
 	video[autoplay]{
 		pointer-events: none;
 	}
+
+	// New button design
+	.btn{
+		border-radius: 0px;
+		border-width: 3px!important;
+		&.btn-success{
+			background-color: transparent!important;
+			border: 3px solid @cole_green;
+			color: @cole_green!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_green;
+			}
+		}
+		&.btn-warning{
+			background-color: transparent!important;
+			border: 3px solid @cole_yellow;
+			color: @cole_yellow!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_yellow;
+			}
+		}
+		&.btn-danger,
+		&.btn-primary,
+		&.btn-custom,
+		&.btn-default{
+			background-color: transparent!important;
+			border: 3px solid @cole_accent;
+			color: @cole_accent!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_accent;
+			}
+		}
+		&.btn-info{
+			background-color: transparent!important;
+			border: 3px solid @cole_blue;
+			color: @cole_blue!important;
+			text-transform: uppercase;
+			font-weight: bold;
+			i{
+				color: @cole_blue;
+			}
+		}
+		&:hover,
+		&:focus,
+		&:active{
+			border-width: 3px!important;
+		}
+	}
+
+	
 	&[data-pagereference=MainUI]{
 		.notification-box{
 			.pulse{
@@ -190,51 +246,6 @@ body{
 			background-color: white!important;
 			border-color: white!important;
 		}
-	}
-
-	// New button design
-	.btn{
-		&.btn-success{
-			background-color: transparent!important;
-			border: 3px solid @cole_green;
-			color: @cole_green!important;
-			text-transform: uppercase;
-			font-weight: bold;
-			i{
-				color: @cole_green;
-			}
-		}
-		&.btn-warning{
-			background-color: transparent!important;
-			border: 3px solid @cole_yellow;
-			color: @cole_yellow!important;
-			text-transform: uppercase;
-			font-weight: bold;
-			i{
-				color: @cole_yellow;
-			}
-		}
-		&.btn-danger{
-			background-color: transparent!important;
-			border: 3px solid @cole_accent;
-			color: @cole_accent!important;
-			text-transform: uppercase;
-			font-weight: bold;
-			i{
-				color: @cole_accent;
-			}
-		}
-		&.btn-info{
-			background-color: transparent!important;
-			border: 3px solid @cole_blue;
-			color: @cole_blue!important;
-			text-transform: uppercase;
-			font-weight: bold;
-			i{
-				color: @cole_blue;
-			}
-		}
-		
 	}
 
 	.LoadingElement{

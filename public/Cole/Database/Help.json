@@ -1,0 +1,41 @@
+{
+    "Table" : "Help",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11
+        },
+        {
+          "Name": "Category",
+          "Type": "integer",
+          "Length": 11,
+          "Null": true
+        },
+        {
+          "Name": "Title",
+          "Type": "varchar",
+          "Length": 100,
+          "Null": true
+        },
+        {
+          "Name": "Score",
+          "Type": "integer",
+          "Null": false,
+          "Length": 11,
+          "Default": 0
+        },
+        {
+            "Name": "Template",
+            "Type": "varchar",
+            "Length": 100,
+            "Null": true
+          },
+          {
+            "Name": "Icon",
+            "Type": "varchar",
+            "Length": 100,
+            "Null": true
+          }
+      ]
+  }

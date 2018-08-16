@@ -1,0 +1,34 @@
+{
+    "Table" : "ColeMod_Pages_Panels_Uids",
+    "Fields": [
+        {
+            "Name": "id",
+            "Type": "integer",
+            "Length": 11
+        },
+        {
+            "Name": "PageID",
+            "Type": "integer",
+            "Length": 11,
+            "Null": true
+        },
+        {
+            "Name": "PanelID",
+            "Type": "integer",
+            "Length": 11,
+            "Null": true
+        },
+        {
+            "Name": "PanelArrayPos",
+            "Type": "integer",
+            "Length": 11,
+            "Null": true
+        },
+        {
+            "Name": "Uid",
+            "Type": "varchar",
+            "Length": 250,
+            "Null": true
+        }
+      ]
+  }

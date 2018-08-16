@@ -1,0 +1,37 @@
+{
+    "Table" : "ColeMod_Stories",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11
+        },
+        {
+          "Name": "Author",
+          "Type": "integer",
+          "Length": 11,
+          "Null": true
+        },
+        {
+          "Name": "Title",
+          "Type": "varchar",
+          "Length": 250,
+          "Null": true
+        },
+        {
+          "Name": "Body",
+          "Type": "text",
+          "Null": true
+        },
+        {
+            "Name": "CreatedAt",
+            "Type": "datetime",
+            "Null": true
+          },
+          {
+            "Name": "UpdatedAt",
+            "Type": "datetime",
+            "Null": true
+          }
+      ]
+  }

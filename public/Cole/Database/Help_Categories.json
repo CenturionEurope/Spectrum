@@ -1,0 +1,16 @@
+{
+    "Table" : "Help_Categories",
+    "Fields": [
+        {
+          "Name": "id",
+          "Type": "integer",
+          "Length": 11
+        },
+        {
+          "Name": "Title",
+          "Type": "varchar",
+          "Length": 100,
+          "Null": true
+        }
+      ]
+  }
