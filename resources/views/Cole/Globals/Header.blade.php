@@ -19,7 +19,7 @@
     <style>
         .content-page[data-module=today],
         .content-page[data-module=500]{
-            background-image: url('{!! $Cole->Unsplash->Url !!}');
+            background-image: url('{!! $Cole->Unsplash->Url or '' !!}');
         }
     </style>
     <body class="fixed-left Loading @isset($Cole->User->NightMode) @if($Cole->User->NightMode==1) NightMode @endif @endif" data-pagereference="{{ $Cole->PageReference or '' }}">
