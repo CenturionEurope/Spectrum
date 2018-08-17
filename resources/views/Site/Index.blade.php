@@ -22,7 +22,7 @@
     <!-- Begin page content -->
     <main role="main" class="container">
       <h1 class="mt-5">{{$Cole->Page->PageMeta->Title}}</h1>
-      <p class="lead">Welcome to your Cole Website test! 👋</p>
+      <p class="lead">Welcome to your Cole Website! 👋</p>
       <p>You can alter this file at resources/views/Site/index.blade.php</p>
       <p>Change attributes in the Pages module or in ColeMod_Pages</p>
       <p><strong>The content below is info to help you understand what Cole sees</strong></p>
