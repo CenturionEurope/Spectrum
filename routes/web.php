@@ -122,6 +122,8 @@ if (strpos(url()->full(), '://cole.') !== false) {
 	Route::post('/Cole/Install', ['uses' =>'Cole\ColeController@InstallCole']);
 	Route::get('/Cole/Install/Reset', ['uses' =>'Cole\ColeController@ResetCole']);
 
+	Route::get('/Cole/Database/Syndicate', ['uses' =>'Cole\Core\DatabaseController@DatabaseSyndicate']);
+
 }else{
 
 	try {

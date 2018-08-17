@@ -669,4 +669,22 @@ class DatabaseController extends Controller
 		}
 				
 	}
+
+	public function DatabaseSyndicate(){
+		$BuildFiles = glob('Cole/Database/*.json', GLOB_BRACE);
+
+		foreach($BuildFiles as $BuildFile){
+			$BuildFile = json_decode(file_get_contents($BuildFile));
+			$Table = $BuildFile->Table;
+			$Structure = $BuildFile->Fields;
+			$Content = $BuildFile->Content;
+
+			// First check if the database table exists
+			if(!Schema::hasTable($Table)){
+				Schema::create($Table);
+			}
+
+		}
+	}
+
 }

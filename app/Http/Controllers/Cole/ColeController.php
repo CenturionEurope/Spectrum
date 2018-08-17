@@ -1444,10 +1444,11 @@ class ColeController extends Controller
 					'Author' => $response->user->name
 				);
 				Cache::put('Unsplash', $Unsplash, 2);
+				return $Unsplash;
 			}
 		}
 
-		return $Unsplash;
+		
 
 	}
 
